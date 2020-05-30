@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="skyyhu的博客">
 <meta property="og:description" content="Hexo yilia使用的几个问题增加归档菜单修改 themes/yilia/_config.yml 123menu:    主页:  /    归档:  /archives/index.html  添加 categories 到menu菜单在yilia主题下的主配置文件_config.xml中找到menu,并把categories添加进去 1234menu:  主页: /  分类: /categ">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-05-30T10:56:36.583Z">
+<meta property="og:updated_time" content="2020-05-30T11:11:45.470Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo guide">
 <meta name="twitter:description" content="Hexo yilia使用的几个问题增加归档菜单修改 themes/yilia/_config.yml 123menu:    主页:  /    归档:  /archives/index.html  添加 categories 到menu菜单在yilia主题下的主配置文件_config.xml中找到menu,并把categories添加进去 1234menu:  主页: /  分类: /categ">
@@ -222,9 +222,10 @@
 <h4 id="添加-categories-到menu菜单"><a href="#添加-categories-到menu菜单" class="headerlink" title="添加 categories 到menu菜单"></a>添加 categories 到menu菜单</h4><p>在yilia主题下的主配置文件_config.xml中找到menu,并把categories添加进去</p>
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  主页: /</span><br><span class="line">  分类: <span class="string">/categories</span></span><br><span class="line">  归档: <span class="string">/archives</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="hexo-yilia主题配置menu不生效"><a href="#hexo-yilia主题配置menu不生效" class="headerlink" title="hexo yilia主题配置menu不生效"></a>hexo yilia主题配置menu不生效</h4><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、`_config.yml` 要配置 `yilia` 主题下的，而不是根目录下的 `_config.yml` 文件。</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>、修改 `_config.yml` 文件需要重启服务的。`hexo s`</span><br></pre></td></tr></table></figure>
-
 <a id="more"></a>
+
+
+<h4 id="hexo-yilia主题配置menu不生效"><a href="#hexo-yilia主题配置menu不生效" class="headerlink" title="hexo yilia主题配置menu不生效"></a>hexo yilia主题配置menu不生效</h4><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、`_config.yml` 要配置 `yilia` 主题下的，而不是根目录下的 `_config.yml` 文件。</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>、修改 `_config.yml` 文件需要重启服务的。`hexo s`</span><br></pre></td></tr></table></figure>
 
 <h4 id="文章如何显示摘要"><a href="#文章如何显示摘要" class="headerlink" title="文章如何显示摘要"></a>文章如何显示摘要</h4><p><strong>问题</strong>。点击主页时，发现所有文章都是全文显示，不利于查找，可控制显示的字数</p>
 <p><strong>解决办法</strong>。 在你 MD 格式文章正文插入 <!-- more -->即可，只会显示它之前的，此后的就不显示，点击文章标题，全文阅读才可看到，同时注释掉以下 themes/yilia/_config.yml，重复</p>
@@ -497,11 +498,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
