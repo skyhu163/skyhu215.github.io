@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-05-30T11:12:08.055Z</updated>
+  <updated>2020-08-11T13:17:33.131Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,265 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>提取windows10主題壁紙</title>
+    <link href="/2020/08/02/%E5%B7%A5%E5%85%B7/%E6%8F%90%E5%8F%96windows10%E4%B8%BB%E9%A1%8C%E5%A3%81%E7%B4%99/"/>
+    <id>/2020/08/02/工具/提取windows10主題壁紙/</id>
+    <published>2020-08-02T13:16:54.000Z</published>
+    <updated>2020-08-11T13:17:33.131Z</updated>
+    
+    <content type="html"><![CDATA[<p>有时候我们去window10 的应用商店下载主题。 下来下来应用之后发现主题之中的图片还挺好看，我们就想着提取主题中的图片作为windos的壁纸。这个时候我们又不知道这个壁纸存放在电脑那个路径下面。</p><p>   今天告诉大家这个方法。打开运行框或者我的电脑的路径输入框，输入如下路径</p><p><strong>C:\Users\Administrator\AppData\Local\Microsoft\Windows\Themes</strong>  </p><p>打开这个路径下面的文件夹</p><p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200802212626780.png" alt="image-20200802212626780"></p><p>打开其中的主题文件夹\DesktopBackground\  就可以看到所有这个主题的图片了</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;有时候我们去window10 的应用商店下载主题。 下来下来应用之后发现主题之中的图片还挺好看，我们就想着提取主题中的图片作为windos的壁纸。这个时候我们又不知道这个壁纸存放在电脑那个路径下面。&lt;/p&gt;
+&lt;p&gt;   今天告诉大家这个方法。打开运行框或者我的电脑的路径输入
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo yilia使用的几个问题</title>
+    <link href="/2020/06/25/hexo/hexo%20yilia%E4%BD%BF%E7%94%A8%E5%87%A0%E4%B8%AA%E9%97%AE%E9%A2%98/"/>
+    <id>/2020/06/25/hexo/hexo yilia使用几个问题/</id>
+    <published>2020-06-25T05:24:49.046Z</published>
+    <updated>2020-06-25T05:24:49.046Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="增加归档菜单"><a href="#增加归档菜单" class="headerlink" title="增加归档菜单"></a>增加归档菜单</h4><p>修改 <code>themes/yilia/_config.yml</code></p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line">    主页:  /</span><br><span class="line">    归档:  <span class="meta-keyword">/archives/</span>index.html</span><br></pre></td></tr></table></figure><h4 id="添加-categories-到menu菜单"><a href="#添加-categories-到menu菜单" class="headerlink" title="添加 categories 到menu菜单"></a>添加 categories 到menu菜单</h4><p>在yilia主题下的主配置文件_config.xml中找到menu,并把categories添加进去</p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  主页: /</span><br><span class="line">  分类: <span class="string">/categories</span></span><br><span class="line">  归档: <span class="string">/archives</span></span><br></pre></td></tr></table></figure><a id="more"></a><h4 id="hexo-yilia主题配置menu不生效"><a href="#hexo-yilia主题配置menu不生效" class="headerlink" title="hexo yilia主题配置menu不生效"></a>hexo yilia主题配置menu不生效</h4><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、`_config.yml` 要配置 `yilia` 主题下的，而不是根目录下的 `_config.yml` 文件。</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>、修改 `_config.yml` 文件需要重启服务的。`hexo s`</span><br></pre></td></tr></table></figure><h4 id="文章如何显示摘要"><a href="#文章如何显示摘要" class="headerlink" title="文章如何显示摘要"></a>文章如何显示摘要</h4><p><strong>问题</strong>。点击主页时，发现所有文章都是全文显示，不利于查找，可控制显示的字数</p><p><strong>解决办法</strong>。 在你 MD 格式文章正文插入 <!-- more -->即可，只会显示它之前的，此后的就不显示，点击文章标题，全文阅读才可看到，同时注释掉以下 themes/yilia/_config.yml，重复</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># excerpt_link: more</span></span><br></pre></td></tr></table></figure><h4 id="配置图片资源"><a href="#配置图片资源" class="headerlink" title="配置图片资源"></a>配置图片资源</h4><p>添加图片资源文件夹。 路径为 themes/yilia/source/下，可添加一个 assets 文件夹，里面存放图片资源即可</p><p>配置文件中直接引用即可。路径为 themes/yilia/_config.yml，找到如下即可</p><p><code>微信二维码图片</code>  <code>weixin:  /assets/img/wechat.png</code></p><p><code>头像图片</code>  <code>avatar:  /assets/img/head.jpg</code></p><p><code>网页图标</code>  <code>favicon:  /assets/img/head.jpg</code></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;增加归档菜单&quot;&gt;&lt;a href=&quot;#增加归档菜单&quot; class=&quot;headerlink&quot; title=&quot;增加归档菜单&quot;&gt;&lt;/a&gt;增加归档菜单&lt;/h4&gt;&lt;p&gt;修改 &lt;code&gt;themes/yilia/_config.yml&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight dts&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;symbol&quot;&gt;menu:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    主页:  /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    归档:  &lt;span class=&quot;meta-keyword&quot;&gt;/archives/&lt;/span&gt;index.html&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;添加-categories-到menu菜单&quot;&gt;&lt;a href=&quot;#添加-categories-到menu菜单&quot; class=&quot;headerlink&quot; title=&quot;添加 categories 到menu菜单&quot;&gt;&lt;/a&gt;添加 categories 到menu菜单&lt;/h4&gt;&lt;p&gt;在yilia主题下的主配置文件_config.xml中找到menu,并把categories添加进去&lt;/p&gt;
+&lt;figure class=&quot;highlight jboss-cli&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;menu:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  主页: /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  分类: &lt;span class=&quot;string&quot;&gt;/categories&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  归档: &lt;span class=&quot;string&quot;&gt;/archives&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在线学习网站</title>
+    <link href="/2020/06/07/%E5%B7%A5%E5%85%B7/%E5%9C%A8%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/"/>
+    <id>/2020/06/07/工具/在线学习网站/</id>
+    <published>2020-06-07T08:46:56.000Z</published>
+    <updated>2020-06-25T05:24:49.048Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>1.RUNOOB</strong>   <a href="https://www.runoob.com/" target="_blank" rel="noopener">https://www.runoob.com/</a></p><ul><li><p>Java教程   <a href="https://www.runoob.com/java/java-tutorial.html" target="_blank" rel="noopener">https://www.runoob.com/java/java-tutorial.html</a></p></li><li><p>JvaScript 教程  <a href="https://www.runoob.com/js/js-tutorial.html" target="_blank" rel="noopener">https://www.runoob.com/js/js-tutorial.html</a></p></li><li><p>Linxu教程     <a href="https://www.runoob.com/linux/linux-comm-less.html" target="_blank" rel="noopener">https://www.runoob.com/linux/linux-comm-less.html</a></p></li></ul><p><strong>2.编程词典</strong>   <a href="http://codingdict.com/" target="_blank" rel="noopener">http://codingdict.com/</a></p><p><strong>3. w3cShcool</strong></p><ul><li><p><a href="https://www.w3cschool.cn/" target="_blank" rel="noopener">https://www.w3cschool.cn/</a></p></li><li><p><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">https://www.w3school.com.cn/</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;1.RUNOOB&lt;/strong&gt;   &lt;a href=&quot;https://www.runoob.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.runoob.com/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么fastjson总报有漏洞</title>
+    <link href="/2020/06/07/Java/%E4%B8%BA%E4%BB%80%E4%B9%88fastjson%E6%80%BB%E6%8A%A5%E6%9C%89%E6%BC%8F%E6%B4%9E/"/>
+    <id>/2020/06/07/Java/为什么fastjson总报有漏洞/</id>
+    <published>2020-06-07T08:37:58.000Z</published>
+    <updated>2020-06-25T05:24:49.044Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux less命令</title>
+    <link href="/2020/06/07/Linux/linux-less-%E5%91%BD%E4%BB%A4/"/>
+    <id>/2020/06/07/Linux/linux-less-命令/</id>
+    <published>2020-06-07T08:32:15.000Z</published>
+    <updated>2020-06-25T05:24:49.045Z</updated>
+    
+    <content type="html"><![CDATA[<p>less 与 more 类似，但使用 less 可以随意浏览文件，而 more 仅能向前移动，却不能向后移动，而且 less 在查看之前不会加载整个文件。</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">less</span> [参数] 文件</span><br></pre></td></tr></table></figure><p><strong>参数说明</strong>：</p><ul><li>-b &lt;缓冲区大小&gt; 设置缓冲区的大小</li><li>-e 当文件显示结束后，自动离开</li><li>-f 强迫打开特殊文件，例如外围设备代号、目录和二进制文件</li><li>-g 只标志最后搜索的关键词</li><li>-i 忽略搜索时的大小写</li><li>-m 显示类似more命令的百分比</li><li>-N 显示每行的行号</li><li>-o &lt;文件名&gt; 将less 输出的内容在指定文件中保存起来</li><li>-Q 不使用警告音</li><li>-s 显示连续空行为一行</li><li>-S 行过长时间将超出部分舍弃</li><li>-x &lt;数字&gt; 将”tab”键显示为规定的数字空格</li><li>/字符串：向下搜索”字符串”的功能</li><li>?字符串：向上搜索”字符串”的功能</li><li>n：重复前一个搜索（与 / 或 ? 有关）</li><li>N：反向重复前一个搜索（与 / 或 ? 有关）</li><li>b 向上翻一页</li><li>d 向后翻半页</li><li>h 显示帮助界面</li><li>Q 退出less 命令</li><li>u 向前滚动半页</li><li>y 向前滚动一行</li><li>空格键 滚动一页</li><li>回车键 滚动一行</li><li>[pagedown]： 向下翻动一页</li><li>[pageup]： 向上翻动一页</li></ul><a id="more"></a><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>1、查看文件</p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">less log2013.<span class="built_in">log</span></span><br></pre></td></tr></table></figure><p>2、ps查看进程信息并通过less分页显示</p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef <span class="string">|less</span></span><br></pre></td></tr></table></figure><p>3、查看命令历史使用记录并通过less分页显示</p><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">root@</span>localhost test]# history | less</span><br><span class="line"><span class="number">22</span>  scp -r tomcat6<span class="number">.0</span><span class="number">.32</span> <span class="symbol">root@</span><span class="number">192.168</span><span class="number">.120</span><span class="number">.203</span>:/opt/soft</span><br><span class="line"><span class="number">23</span>  cd ..</span><br><span class="line"><span class="number">24</span>  scp -r web <span class="symbol">root@</span><span class="number">192.168</span><span class="number">.120</span><span class="number">.203</span>:/opt/</span><br><span class="line"><span class="number">25</span>  cd soft</span><br><span class="line"><span class="number">26</span>  ls</span><br><span class="line">……省略……</span><br></pre></td></tr></table></figure><p>4、浏览多个文件</p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">less log2013.<span class="built_in">log</span> log2014.<span class="built_in">log</span></span><br></pre></td></tr></table></figure><p>说明：<br>输入 ：n后，切换到 log2014.log<br>输入 ：p 后，切换到log2013.log</p><h3 id="附加备注"><a href="#附加备注" class="headerlink" title="附加备注"></a>附加备注</h3><p>1.全屏导航</p><ul><li>ctrl + F - 向前移动一屏</li><li>ctrl + B - 向后移动一屏</li><li>ctrl + D - 向前移动半屏</li><li>ctrl + U - 向后移动半屏</li></ul><p>2.单行导航</p><ul><li>j - 向前移动一行</li><li>k - 向后移动一行</li></ul><p>3.其它导航</p><ul><li>G - 移动到最后一行</li><li>g - 移动到第一行</li><li>q / ZZ - 退出 less 命令</li></ul><p>4.其它有用的命令</p><ul><li>v - 使用配置的编辑器编辑当前文件</li><li>h - 显示 less 的帮助文档</li><li>&amp;pattern - 仅显示匹配模式的行，而不是整个文件</li></ul><p>5.标记导航</p><p>当使用 less 查看大文件时，可以在任何一个位置作标记，可以通过命令导航到标有特定标记的文本位置：</p><ul><li>ma - 使用 a 标记文本的当前位置</li><li>‘a - 导航到标记 a 处</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;less 与 more 类似，但使用 less 可以随意浏览文件，而 more 仅能向前移动，却不能向后移动，而且 less 在查看之前不会加载整个文件。&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight cmake&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;less&lt;/span&gt; [参数] 文件&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;参数说明&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-b &amp;lt;缓冲区大小&amp;gt; 设置缓冲区的大小&lt;/li&gt;
+&lt;li&gt;-e 当文件显示结束后，自动离开&lt;/li&gt;
+&lt;li&gt;-f 强迫打开特殊文件，例如外围设备代号、目录和二进制文件&lt;/li&gt;
+&lt;li&gt;-g 只标志最后搜索的关键词&lt;/li&gt;
+&lt;li&gt;-i 忽略搜索时的大小写&lt;/li&gt;
+&lt;li&gt;-m 显示类似more命令的百分比&lt;/li&gt;
+&lt;li&gt;-N 显示每行的行号&lt;/li&gt;
+&lt;li&gt;-o &amp;lt;文件名&amp;gt; 将less 输出的内容在指定文件中保存起来&lt;/li&gt;
+&lt;li&gt;-Q 不使用警告音&lt;/li&gt;
+&lt;li&gt;-s 显示连续空行为一行&lt;/li&gt;
+&lt;li&gt;-S 行过长时间将超出部分舍弃&lt;/li&gt;
+&lt;li&gt;-x &amp;lt;数字&amp;gt; 将”tab”键显示为规定的数字空格&lt;/li&gt;
+&lt;li&gt;/字符串：向下搜索”字符串”的功能&lt;/li&gt;
+&lt;li&gt;?字符串：向上搜索”字符串”的功能&lt;/li&gt;
+&lt;li&gt;n：重复前一个搜索（与 / 或 ? 有关）&lt;/li&gt;
+&lt;li&gt;N：反向重复前一个搜索（与 / 或 ? 有关）&lt;/li&gt;
+&lt;li&gt;b 向上翻一页&lt;/li&gt;
+&lt;li&gt;d 向后翻半页&lt;/li&gt;
+&lt;li&gt;h 显示帮助界面&lt;/li&gt;
+&lt;li&gt;Q 退出less 命令&lt;/li&gt;
+&lt;li&gt;u 向前滚动半页&lt;/li&gt;
+&lt;li&gt;y 向前滚动一行&lt;/li&gt;
+&lt;li&gt;空格键 滚动一页&lt;/li&gt;
+&lt;li&gt;回车键 滚动一行&lt;/li&gt;
+&lt;li&gt;[pagedown]： 向下翻动一页&lt;/li&gt;
+&lt;li&gt;[pageup]： 向上翻动一页&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 常用命令</title>
+    <link href="/2020/06/03/Linux/Linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>/2020/06/03/Linux/Linux-常用命令/</id>
+    <published>2020-06-03T14:33:03.000Z</published>
+    <updated>2020-06-25T05:24:49.045Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac 常用软件列表</title>
+    <link href="/2020/06/03/%E5%B7%A5%E5%85%B7/mac-%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%88%97%E8%A1%A8/"/>
+    <id>/2020/06/03/工具/mac-常用软件列表/</id>
+    <published>2020-06-03T14:16:37.000Z</published>
+    <updated>2020-06-25T05:24:49.048Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h3><ul><li>Typora   markdown文档工具</li><li>FastStone Capture  for windows    截图工具</li><li>QQ 影音</li><li>Oracle  VM VirtualBox</li><li>印象笔记</li><li>OneNote</li><li>xmind 思维导图</li></ul><h3 id="开发软件"><a href="#开发软件" class="headerlink" title="开发软件"></a>开发软件</h3><ul><li><p>JDK</p></li><li><p>Android Studio</p></li><li><p>VScode  </p></li><li><p>Sublime Text3</p></li><li><p>Editplus</p></li><li><p>Intelij Idea</p></li><li><p>NotePad++</p></li><li><p>Cmder</p></li><li><p>Source Tree</p></li><li><p>Git</p></li><li><p>Beyond Compare</p></li><li><p>Eclipse</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;常用软件&quot;&gt;&lt;a href=&quot;#常用软件&quot; class=&quot;headerlink&quot; title=&quot;常用软件&quot;&gt;&lt;/a&gt;常用软件&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Typora   markdown文档工具&lt;/li&gt;
+&lt;li&gt;FastStone Capture  for wi
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用快捷键-VSCode</title>
+    <link href="/2020/06/03/%E5%B7%A5%E5%85%B7/VSCode%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>/2020/06/03/工具/VSCode 常用快捷键/</id>
+    <published>2020-06-03T14:16:14.000Z</published>
+    <updated>2020-06-25T05:24:49.048Z</updated>
+    
+    <content type="html"><![CDATA[<p>同时打开多个窗口（查看多个项目）</p><ul><li>打开一个新窗口： Ctrl+Shift+N</li><li>关闭窗口： Ctrl+Shift+W</li></ul><p>同时打开多个编辑器（查看多个文件）</p><ul><li>新建文件 Ctrl+N</li><li>历史打开文件之间切换 Ctrl+Tab，Alt+Left，Alt+Right</li><li>切出一个新的编辑器（最多3个）Ctrl+\，也可以按住Ctrl鼠标点击Explorer里的文件名</li><li>左中右3个编辑器的快捷键Ctrl+1 Ctrl+2 Ctrl+3</li><li>3个编辑器之间循环切换 Ctrl+`</li><li>编辑器换位置，Ctrl+k然后按Left或Right</li></ul><p>格式调整</p><ul><li>代码行缩进Ctrl+[， Ctrl+]</li><li>折叠打开代码块 Ctrl+Shift+[， Ctrl+Shift+]</li><li>Ctrl+C Ctrl+V如果不选中，默认复制或剪切一整行</li><li>代码格式化：Shift+Alt+F，或Ctrl+Shift+P后输入format code</li><li>修剪空格Ctrl+Shift+X</li><li>上下移动一行： Alt+Up 或 Alt+Down</li><li>向上向下复制一行： Shift+Alt+Up或Shift+Alt+Down</li><li>在当前行下边插入一行Ctrl+Enter</li><li>在当前行上方插入一行Ctrl+Shift+Enter</li></ul><p>光标相关</p><ul><li>移动到行首：Home</li><li>移动到行尾：End</li><li>移动到文件结尾：Ctrl+End</li><li>移动到文件开头：Ctrl+Home</li><li>移动到后半个括号 Ctrl+Shift+]</li><li>选中当前行Ctrl+i（双击）</li><li>选择从光标到行尾Shift+End</li><li>选择从行首到光标处Shift+Home</li><li>删除光标右侧的所有字Ctrl+Delete</li><li>Shrink/expand selection： Shift+Alt+Left和Shift+Alt+Right</li><li>Multi-Cursor：可以连续选择多处，然后一起修改，Alt+Click添加cursor或者Ctrl+Alt+Down 或 Ctrl+Alt+Up</li><li>同时选中所有匹配的Ctrl+Shift+L</li><li>Ctrl+D下一个匹配的也被选中(被我自定义成删除当前行了，见下边Ctrl+Shift+K)</li><li>回退上一个光标操作Ctrl+U</li></ul><p>重构代码</p><ul><li>跳转到定义处：F12</li><li>定义处缩略图：只看一眼而不跳转过去Alt+F12</li><li>列出所有的引用：Shift+F12</li><li>同时修改本文件中所有匹配的：Ctrl+F12</li><li>重命名：比如要修改一个方法名，可以选中后按F2，输入新的名字，回车，会发现所有的文件都修改过了。</li><li>跳转到下一个Error或Warning：当有多个错误时可以按F8逐个跳转</li><li>查看diff 在explorer里选择文件右键 Set file to compare，然后需要对比的文件上右键选择Compare with ‘file_name_you_chose’.</li></ul><p>查找替换</p><ul><li>查找 Ctrl+F</li><li>查找替换 Ctrl+H</li><li>整个文件夹中查找 Ctrl+Shift+F</li></ul><p>显示相关</p><ul><li>全屏：F11</li><li>zoomIn/zoomOut：Ctrl + =/Ctrl + -</li><li>侧边栏显/隐：Ctrl+B</li><li>预览markdown Ctrl+Shift+V</li></ul><p>其他</p><ul><li>自动保存：File -&gt; AutoSave ，或者Ctrl+Shift+P，输入 auto</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;同时打开多个窗口（查看多个项目）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开一个新窗口： Ctrl+Shift+N&lt;/li&gt;
+&lt;li&gt;关闭窗口： Ctrl+Shift+W&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;同时打开多个编辑器（查看多个文件）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;新建文件 Ctrl+N&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 常用软件列表</title>
+    <link href="/2020/06/03/%E5%B7%A5%E5%85%B7/Windows-%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%88%97%E8%A1%A8/"/>
+    <id>/2020/06/03/工具/Windows-常用软件列表/</id>
+    <published>2020-06-03T14:16:14.000Z</published>
+    <updated>2020-06-25T05:24:49.048Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><h3 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h3><ul><li>Typora   markdown文档工具</li><li>FastStone Capture  for windows    截图工具</li><li>QQ 影音</li><li>Oracle  VM VirtualBox</li><li>印象笔记</li><li>OneNote</li><li>xmind 思维导图</li></ul></li></ul><h3 id="开发软件"><a href="#开发软件" class="headerlink" title="开发软件"></a>开发软件</h3><ul><li><p>JDK</p></li><li><p>Android Studio</p></li><li><p>VScode  </p></li><li><p>Sublime Text3</p></li><li><p>Editplus</p></li><li><p>Intelij Idea</p></li><li><p>NotePad++</p></li><li><p>Cmder</p></li><li><p>Source Tree</p></li><li><p>Git</p></li><li><p>Beyond Compare</p></li><li><p>Eclipse</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;h3 id=&quot;常用软件&quot;&gt;&lt;a href=&quot;#常用软件&quot; class=&quot;headerlink&quot; title=&quot;常用软件&quot;&gt;&lt;/a&gt;常用软件&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Typora   markdown文档工具&lt;/li&gt;
+&lt;li&gt;FastStone Captur
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac 开发利器</title>
+    <link href="/2020/06/03/%E5%B7%A5%E5%85%B7/DevOps/"/>
+    <id>/2020/06/03/工具/DevOps/</id>
+    <published>2020-06-03T14:15:41.000Z</published>
+    <updated>2020-06-25T05:24:49.047Z</updated>
+    
+    <content type="html"><![CDATA[<p>- </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;- &lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>hexo guide</title>
@@ -40,41 +299,17 @@
   </entry>
   
   <entry>
-    <title>hexo guide</title>
-    <link href="/2020/05/30/hexo/hexo%20yilia%E4%BD%BF%E7%94%A8%E5%87%A0%E4%B8%AA%E9%97%AE%E9%A2%98/"/>
-    <id>/2020/05/30/hexo/hexo yilia使用几个问题/</id>
-    <published>2020-05-30T06:32:47.203Z</published>
-    <updated>2020-05-30T11:14:40.653Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Hexo-yilia使用的几个问题"><a href="#Hexo-yilia使用的几个问题" class="headerlink" title="Hexo yilia使用的几个问题"></a>Hexo yilia使用的几个问题</h2><h4 id="增加归档菜单"><a href="#增加归档菜单" class="headerlink" title="增加归档菜单"></a>增加归档菜单</h4><p>修改 <code>themes/yilia/_config.yml</code></p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line">    主页:  /</span><br><span class="line">    归档:  <span class="meta-keyword">/archives/</span>index.html</span><br></pre></td></tr></table></figure><h4 id="添加-categories-到menu菜单"><a href="#添加-categories-到menu菜单" class="headerlink" title="添加 categories 到menu菜单"></a>添加 categories 到menu菜单</h4><p>在yilia主题下的主配置文件_config.xml中找到menu,并把categories添加进去</p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  主页: /</span><br><span class="line">  分类: <span class="string">/categories</span></span><br><span class="line">  归档: <span class="string">/archives</span></span><br></pre></td></tr></table></figure><a id="more"></a><h4 id="hexo-yilia主题配置menu不生效"><a href="#hexo-yilia主题配置menu不生效" class="headerlink" title="hexo yilia主题配置menu不生效"></a>hexo yilia主题配置menu不生效</h4><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、`_config.yml` 要配置 `yilia` 主题下的，而不是根目录下的 `_config.yml` 文件。</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>、修改 `_config.yml` 文件需要重启服务的。`hexo s`</span><br></pre></td></tr></table></figure><h4 id="文章如何显示摘要"><a href="#文章如何显示摘要" class="headerlink" title="文章如何显示摘要"></a>文章如何显示摘要</h4><p><strong>问题</strong>。点击主页时，发现所有文章都是全文显示，不利于查找，可控制显示的字数</p><p><strong>解决办法</strong>。 在你 MD 格式文章正文插入 <!-- more -->即可，只会显示它之前的，此后的就不显示，点击文章标题，全文阅读才可看到，同时注释掉以下 themes/yilia/_config.yml，重复</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># excerpt_link: more</span></span><br></pre></td></tr></table></figure><h4 id="配置图片资源"><a href="#配置图片资源" class="headerlink" title="配置图片资源"></a>配置图片资源</h4><p>添加图片资源文件夹。 路径为 themes/yilia/source/下，可添加一个 assets 文件夹，里面存放图片资源即可</p><p>配置文件中直接引用即可。路径为 themes/yilia/_config.yml，找到如下即可</p><p><code>微信二维码图片</code>  <code>weixin:  /assets/img/wechat.png</code></p><p><code>头像图片</code>  <code>avatar:  /assets/img/head.jpg</code></p><p><code>网页图标</code>  <code>favicon:  /assets/img/head.jpg</code></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Hexo-yilia使用的几个问题&quot;&gt;&lt;a href=&quot;#Hexo-yilia使用的几个问题&quot; class=&quot;headerlink&quot; title=&quot;Hexo yilia使用的几个问题&quot;&gt;&lt;/a&gt;Hexo yilia使用的几个问题&lt;/h2&gt;&lt;h4 id=&quot;增加归档菜单&quot;&gt;&lt;a href=&quot;#增加归档菜单&quot; class=&quot;headerlink&quot; title=&quot;增加归档菜单&quot;&gt;&lt;/a&gt;增加归档菜单&lt;/h4&gt;&lt;p&gt;修改 &lt;code&gt;themes/yilia/_config.yml&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight dts&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;symbol&quot;&gt;menu:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    主页:  /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    归档:  &lt;span class=&quot;meta-keyword&quot;&gt;/archives/&lt;/span&gt;index.html&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;添加-categories-到menu菜单&quot;&gt;&lt;a href=&quot;#添加-categories-到menu菜单&quot; class=&quot;headerlink&quot; title=&quot;添加 categories 到menu菜单&quot;&gt;&lt;/a&gt;添加 categories 到menu菜单&lt;/h4&gt;&lt;p&gt;在yilia主题下的主配置文件_config.xml中找到menu,并把categories添加进去&lt;/p&gt;
-&lt;figure class=&quot;highlight jboss-cli&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;menu:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  主页: /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  分类: &lt;span class=&quot;string&quot;&gt;/categories&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  归档: &lt;span class=&quot;string&quot;&gt;/archives&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>hexo 主题推荐</title>
     <link href="/2020/05/30/hexo/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
     <id>/2020/05/30/hexo/hexo博客主题/</id>
     <published>2020-05-29T16:27:10.000Z</published>
-    <updated>2020-05-30T10:56:35.493Z</updated>
+    <updated>2020-06-25T05:24:49.047Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Hexo主题推荐"><a href="#Hexo主题推荐" class="headerlink" title="Hexo主题推荐"></a>Hexo主题推荐</h1><p>推荐几个美观的Hexo博客主题。</p><p>Hexo官方网站上也收集了一些主题<br>地址：<a href="https://link.jianshu.com/?t=https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p><a id="more"></a><p>比较看好两款主题:</p><h4 id="hexo-theme-yilia"><a href="#hexo-theme-yilia" class="headerlink" title="hexo-theme-yilia"></a><a href>hexo-theme-yilia</a></h4><p>github: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia</a></p><p>​             <a href="https://github.com/litten/BlogBackup" target="_blank" rel="noopener">https://github.com/litten/BlogBackup</a></p><p>推荐一个博客:<a href="http://litten.me/" target="_blank" rel="noopener">http://litten.me/</a></p><h4 id="hexo-theme-yilia-plus"><a href="#hexo-theme-yilia-plus" class="headerlink" title="hexo-theme-yilia-plus"></a><a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">hexo-theme-yilia-plus</a></h4><p>github: <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a></p><p>​             <a href="https://github.com/JoeyBling/yilia-plus-demo" target="_blank" rel="noopener">https://github.com/JoeyBling/yilia-plus-demo</a></p><p>推荐一个博客：<a href="https://joeybling.github.io/" target="_blank" rel="noopener">https://joeybling.github.io/</a>   <a href="https://zhousiwei.gitee.io/" target="_blank" rel="noopener">https://zhousiwei.gitee.io/</a></p><h2 id="Yilia"><a href="#Yilia" class="headerlink" title="Yilia"></a><a href="https://link.jianshu.com/?t=https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Yilia</a></h2><p>Yilia 是为 hexo 2.4+制作的主题。<br>崇尚简约优雅，以及极致的性能。</p><p>作者博客：<a href="https://link.jianshu.com/?t=http://litten.github.io/" target="_blank" rel="noopener">http://litten.github.io/</a></p><p><img src="https://camo.githubusercontent.com/1a7175617e4d866305b091857c7517ae542df65d/687474703a2f2f6c697474656e646f6d6f2e73696e616170702e636f6d2f79696c69612f79696c69612d7063312e706e67" alt="img"></p><h2 id="NexT"><a href="#NexT" class="headerlink" title="NexT"></a><a href="https://link.jianshu.com/?t=https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">NexT</a></h2><p><a href="https://link.jianshu.com/?t=https://aswifter.com" target="_blank" rel="noopener">我的网站</a>就是采用这个主题，简洁美观。<br>目前Github上Star最高的Hexo主题，支持几种不同的风格。<br>作者提供了非常完善的配置说明。</p><p>作者博客：<a href="https://link.jianshu.com/?t=http://notes.iissnan.com/" target="_blank" rel="noopener">http://notes.iissnan.com/</a></p><p><img src="https://camo.githubusercontent.com/2e2c5c6d351ebe899fcebed0f56a5b72b2660b06/687474703a2f2f696973736e616e2e636f6d2f6e657875732f6e6578742f6e6578742d736368656d65732e6a7067" alt="img"></p><h2 id="Yelee"><a href="#Yelee" class="headerlink" title="Yelee"></a><a href="https://link.jianshu.com/?t=https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="noopener">Yelee</a></h2><p>该主题是作者基于<a href="https://link.jianshu.com/?t=https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Yilia</a>修改而来，改变了大量的样式。</p><p>作者博客：<a href="https://link.jianshu.com/?t=http://moxfive.xyz/" target="_blank" rel="noopener">http://moxfive.xyz/</a></p><p><img src="https://camo.githubusercontent.com/e337038721edc1dea4a59052e9ef49a0943c6722/687474703a2f2f6931332e74696574756b752e636f6d2f343034623863363365623135353739332e6a7067" alt="img"></p><h2 id="Tranquilpeak"><a href="#Tranquilpeak" class="headerlink" title="Tranquilpeak"></a><a href="https://link.jianshu.com/?t=https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak" target="_blank" rel="noopener">Tranquilpeak</a></h2><p>预览地址：<a href="https://link.jianshu.com/?t=http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak/" target="_blank" rel="noopener">http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak/</a></p><p><img src="https://camo.githubusercontent.com/cdaabe4b88d56cfdbcfac51897f05d22fa1aec6b/687474703a2f2f6431753962697761786a6e6777672e636c6f756466726f6e742e6e65742f73686f7763617365732f73686f77636173652d76312e362e6a7067" alt="img"></p><h2 id="Maupassant"><a href="#Maupassant" class="headerlink" title="Maupassant"></a><a href="https://link.jianshu.com/?t=https://github.com/icylogic/maupassant-hexo" target="_blank" rel="noopener">Maupassant</a></h2><p>一款非常简洁的主题</p><p>作者博客：<a href="https://link.jianshu.com/?t=https://www.haomwei.com/technology/maupassant-hexo.html" target="_blank" rel="noopener">https://www.haomwei.com/technology/maupassant-hexo.html</a></p><p><img src="https://camo.githubusercontent.com/5d171b08a501d1b46bd9dfcc4594e1e34e961a0a/68747470733a2f2f6464796465672e6279333330322e6c69766566696c6573746f72652e636f6d2f793270315a67484552346549466145486877616639364d765a48345f694c75664549446a376f38616344674931475846447450492d65524167766f6b466f52396972627a373338674d6d57635f4e3779657847367568423144636d656c623063586738486578706941645a3548512f6d2e706e67" alt="img"></p><h2 id="Hueman"><a href="#Hueman" class="headerlink" title="Hueman"></a><a href="https://link.jianshu.com/?t=https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">Hueman</a></h2><p>预览地址：<a href="https://link.jianshu.com/?t=http://blog.zhangruipeng.me/hexo-theme-hueman/" target="_blank" rel="noopener">http://blog.zhangruipeng.me/hexo-theme-hueman/</a></p><p><img src="https://cloud.githubusercontent.com/assets/8849362/12326809/da2012c0-bb0d-11e5-8f7f-0b12cf0c2113.jpg" alt="img"></p><h2 id="Jacman"><a href="#Jacman" class="headerlink" title="Jacman"></a><a href="https://link.jianshu.com/?t=https://github.com/wuchong/jacman" target="_blank" rel="noopener">Jacman</a></h2><p>这个也是很多的人使用的一个主题，之前我也使用过。<br>不过目前作者也改用<a href="https://link.jianshu.com/?t=https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">NexT</a>了。</p><p>预览地址：<a href="https://link.jianshu.com/?t=http://wuchong.me/jacman/" target="_blank" rel="noopener">http://wuchong.me/jacman/</a></p><p><img src="https://hexo.io/build/screenshots/Jacman-f18a929ff5@2x.png" alt="img"></p><h2 id><a href="#" class="headerlink" title></a></h2>]]></content>
+    <content type="html"><![CDATA[<p>推荐几个美观的Hexo博客主题。</p><p>Hexo官方网站上也收集了一些主题<br>地址：<a href="https://link.jianshu.com/?t=https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p><a id="more"></a><p>比较看好两款主题:</p><h4 id="hexo-theme-yilia"><a href="#hexo-theme-yilia" class="headerlink" title="hexo-theme-yilia"></a><a href>hexo-theme-yilia</a></h4><p>github: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia</a></p><p>​             <a href="https://github.com/litten/BlogBackup" target="_blank" rel="noopener">https://github.com/litten/BlogBackup</a></p><p>推荐一个博客:<a href="http://litten.me/" target="_blank" rel="noopener">http://litten.me/</a></p><h4 id="hexo-theme-yilia-plus"><a href="#hexo-theme-yilia-plus" class="headerlink" title="hexo-theme-yilia-plus"></a><a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">hexo-theme-yilia-plus</a></h4><p>github: <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a></p><p>​             <a href="https://github.com/JoeyBling/yilia-plus-demo" target="_blank" rel="noopener">https://github.com/JoeyBling/yilia-plus-demo</a></p><p>推荐一个博客：<a href="https://joeybling.github.io/" target="_blank" rel="noopener">https://joeybling.github.io/</a>   <a href="https://zhousiwei.gitee.io/" target="_blank" rel="noopener">https://zhousiwei.gitee.io/</a></p><h2 id="Yilia"><a href="#Yilia" class="headerlink" title="Yilia"></a><a href="https://link.jianshu.com/?t=https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Yilia</a></h2><p>Yilia 是为 hexo 2.4+制作的主题。<br>崇尚简约优雅，以及极致的性能。</p><p>作者博客：<a href="https://link.jianshu.com/?t=http://litten.github.io/" target="_blank" rel="noopener">http://litten.github.io/</a></p><p><img src="https://camo.githubusercontent.com/1a7175617e4d866305b091857c7517ae542df65d/687474703a2f2f6c697474656e646f6d6f2e73696e616170702e636f6d2f79696c69612f79696c69612d7063312e706e67" alt="img"></p><h2 id="NexT"><a href="#NexT" class="headerlink" title="NexT"></a><a href="https://link.jianshu.com/?t=https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">NexT</a></h2><p><a href="https://link.jianshu.com/?t=https://aswifter.com" target="_blank" rel="noopener">我的网站</a>就是采用这个主题，简洁美观。<br>目前Github上Star最高的Hexo主题，支持几种不同的风格。<br>作者提供了非常完善的配置说明。</p><p>作者博客：<a href="https://link.jianshu.com/?t=http://notes.iissnan.com/" target="_blank" rel="noopener">http://notes.iissnan.com/</a></p><p><img src="https://camo.githubusercontent.com/2e2c5c6d351ebe899fcebed0f56a5b72b2660b06/687474703a2f2f696973736e616e2e636f6d2f6e657875732f6e6578742f6e6578742d736368656d65732e6a7067" alt="img"></p><h2 id="Yelee"><a href="#Yelee" class="headerlink" title="Yelee"></a><a href="https://link.jianshu.com/?t=https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="noopener">Yelee</a></h2><p>该主题是作者基于<a href="https://link.jianshu.com/?t=https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Yilia</a>修改而来，改变了大量的样式。</p><p>作者博客：<a href="https://link.jianshu.com/?t=http://moxfive.xyz/" target="_blank" rel="noopener">http://moxfive.xyz/</a></p><p><img src="https://camo.githubusercontent.com/e337038721edc1dea4a59052e9ef49a0943c6722/687474703a2f2f6931332e74696574756b752e636f6d2f343034623863363365623135353739332e6a7067" alt="img"></p><h2 id="Tranquilpeak"><a href="#Tranquilpeak" class="headerlink" title="Tranquilpeak"></a><a href="https://link.jianshu.com/?t=https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak" target="_blank" rel="noopener">Tranquilpeak</a></h2><p>预览地址：<a href="https://link.jianshu.com/?t=http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak/" target="_blank" rel="noopener">http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak/</a></p><p><img src="https://camo.githubusercontent.com/cdaabe4b88d56cfdbcfac51897f05d22fa1aec6b/687474703a2f2f6431753962697761786a6e6777672e636c6f756466726f6e742e6e65742f73686f7763617365732f73686f77636173652d76312e362e6a7067" alt="img"></p><h2 id="Maupassant"><a href="#Maupassant" class="headerlink" title="Maupassant"></a><a href="https://link.jianshu.com/?t=https://github.com/icylogic/maupassant-hexo" target="_blank" rel="noopener">Maupassant</a></h2><p>一款非常简洁的主题</p><p>作者博客：<a href="https://link.jianshu.com/?t=https://www.haomwei.com/technology/maupassant-hexo.html" target="_blank" rel="noopener">https://www.haomwei.com/technology/maupassant-hexo.html</a></p><p><img src="https://camo.githubusercontent.com/5d171b08a501d1b46bd9dfcc4594e1e34e961a0a/68747470733a2f2f6464796465672e6279333330322e6c69766566696c6573746f72652e636f6d2f793270315a67484552346549466145486877616639364d765a48345f694c75664549446a376f38616344674931475846447450492d65524167766f6b466f52396972627a373338674d6d57635f4e3779657847367568423144636d656c623063586738486578706941645a3548512f6d2e706e67" alt="img"></p><h2 id="Hueman"><a href="#Hueman" class="headerlink" title="Hueman"></a><a href="https://link.jianshu.com/?t=https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">Hueman</a></h2><p>预览地址：<a href="https://link.jianshu.com/?t=http://blog.zhangruipeng.me/hexo-theme-hueman/" target="_blank" rel="noopener">http://blog.zhangruipeng.me/hexo-theme-hueman/</a></p><p><img src="https://cloud.githubusercontent.com/assets/8849362/12326809/da2012c0-bb0d-11e5-8f7f-0b12cf0c2113.jpg" alt="img"></p><h2 id="Jacman"><a href="#Jacman" class="headerlink" title="Jacman"></a><a href="https://link.jianshu.com/?t=https://github.com/wuchong/jacman" target="_blank" rel="noopener">Jacman</a></h2><p>这个也是很多的人使用的一个主题，之前我也使用过。<br>不过目前作者也改用<a href="https://link.jianshu.com/?t=https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">NexT</a>了。</p><p>预览地址：<a href="https://link.jianshu.com/?t=http://wuchong.me/jacman/" target="_blank" rel="noopener">http://wuchong.me/jacman/</a></p><p><img src="https://hexo.io/build/screenshots/Jacman-f18a929ff5@2x.png" alt="img"></p><h2 id><a href="#" class="headerlink" title></a></h2>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Hexo主题推荐&quot;&gt;&lt;a href=&quot;#Hexo主题推荐&quot; class=&quot;headerlink&quot; title=&quot;Hexo主题推荐&quot;&gt;&lt;/a&gt;Hexo主题推荐&lt;/h1&gt;&lt;p&gt;推荐几个美观的Hexo博客主题。&lt;/p&gt;
+      &lt;p&gt;推荐几个美观的Hexo博客主题。&lt;/p&gt;
 &lt;p&gt;Hexo官方网站上也收集了一些主题&lt;br&gt;地址：&lt;a href=&quot;https://link.jianshu.com/?t=https://hexo.io/themes/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://hexo.io/themes/&lt;/a&gt;&lt;/p&gt;
     
     </summary>
@@ -180,18 +415,380 @@
   </entry>
   
   <entry>
-    <title>Intelij idea 插件</title>
-    <link href="/2020/05/29/%E5%B7%A5%E5%85%B7/intelij%20idea%20%E6%8F%92%E4%BB%B6/"/>
-    <id>/2020/05/29/工具/intelij idea 插件/</id>
-    <published>2020-05-29T14:08:01.000Z</published>
-    <updated>2020-05-30T10:56:40.286Z</updated>
+    <title>很好的SharedPreferences的工具类</title>
+    <link href="/2020/05/29/Android/SharedPreferences%E7%9A%84%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
+    <id>/2020/05/29/Android/SharedPreferences的工具类/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.041Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>1、Free-idea-mybatis</strong></p><p>mybatis xml和对应的mapper之间来回切换的时候，有时候不同人开发，放置的位置又不同，使用此插件后，来回切换的时候异常方便，和所放置的位置无关~</p><p><strong>2.翻译插件Translation</strong></p><p>开发的时候经常会遇到看不懂的英语单词，再去百度多麻烦，这里推荐这款翻译插件，插件名称叫做，安装后选中单词按下快捷键ALT+1即可。</p><a id="more"></a><p><strong>3.Maven Helper</strong></p><p>主要功能如下：查找和排除冲突依赖项的简便方法，为包含当前文件或根模块的模块运行/调试maven目标的操作，运行/调试当前测试文件的操作</p><p><strong>4、Lombok</strong></p><p>Lombok能以简单的注解形式来简化java代码，提高开发人员的开发效率。例如开发中经常需要写的javabean，都需要花时间去添加相应的getter/setter，也许还要去写构造器、equals等方法，而且需要维护，当属性多时会出现大量的getter/setter方法，这些显得很冗长也没有太多技术含量，一旦修改属性，就容易出现忘记修改对应方法的失误。Lombok能通过注解的方式，在编译时自动为属性生成构造器、getter/setter、equals、hashcode、toString方法。</p><p>出现的神奇就是在源码中没有getter和setter方法，</p><p><strong>5、IdeaJad</strong></p><p>以前查看class文件形式的时候或者jar，都会使用一个外部反编译工具，这样操作明显不方便，使用此插件可以一直在idea中查看文件~  ps：其实Inteli Idea这个编译器已经自带了反编译功能，老夫<del>~</del></p><p>选择class文件，右键 Decompile,完成反编译</p><p><strong>6、GrepConsole</strong></p><p>Idea console输出日志一大推，想要快速找到自己想要的类型日志，使用此插件可以快速定位到自己关注的类型日志，比如error，warn，自己也可以配置自己喜欢的颜色~</p><p>从settings进入，点击 other settings，可以配置自己喜欢的颜色提示，比如我只选择了默认~</p><p><strong>7、GsonFormat</strong></p><p>在与组外或者不同部门对接接口时候发现，有时候对方返回的是JSON对象，自己想要用一个对象去接受，以便于处理后续，此时，需要自己一个个手动去输入属性么，肯定很抓狂，不过咱们可以使用这个插件来解决这个尴尬问题，当然也可以使用外部网址解决，比如bejson这个网站~  </p><p><strong>8、Mybatis-log-plugin</strong></p><p>开发的项目一般都少不了日志系统，而我们在书写mysql语句的时候，参数的对应，往往有时候会忽略，mybatis自己控制的参数编译对应，个人感觉有点反人类，我们可以使用这个插件变成自己比较直观的对应~</p><p>选中需要转换的mybatis log日志，然后点击右键，选择Restore sql from slection</p><p><strong>9、Alibaba Java Coding Guidelines</strong></p><p>一款阿里巴巴公司试行的开发设计规范~ </p><ol start="10"><li><strong>彩虹颜色括号</strong>：Rainbow Brackets</li></ol><p><strong>11、阿里 p3c</strong></p><p><a href="https://github.com/alibaba/p3c/blob/master/idea-plugin/README_cn.md" target="_blank" rel="noopener">https://github.com/alibaba/p3c/blob/master/idea-plugin/README_cn.md</a></p><p>另外还有一些其他的插件：<br>阿里代码规约检测：Alibaba Java Coding Guidelines<br>自动生成序列图插件：SequenceDiagram<br>快捷键提示工具：Key promoter X<br>代码注解插件： Lombok<br>代码生成工具：CodeMaker<br>代码质量检查工具：SonarLint<br>单元测试测试生成工具：JUnitGenerator<br>Mybatis 工具：Free Mybatis plugin<br>JSON转领域对象工具：GsonFormat<br>字符串工具：String Manipulation<br>Redis可视化：Iedis<br>K8s工具：Kubernetes</p>]]></content>
+    <content type="html"><![CDATA[<p>网上看到的一个别人写的shareperfence工具类，挺好用的。我们平常保存一些数据，都会用到SharedPreferences，他是保存在手机里面的，</p><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line">package com.example.shortcut;</span><br><span class="line"></span><br><span class="line">import android.content.Context;</span><br><span class="line"></span><br><span class="line">import android.content.SharedPreferences;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* SharedPreferences的一个工具类，调用setParam就能保存String, Integer, Boolean, Float, Long类型的参数</span></span><br><span class="line"><span class="comment">* 同样调用getParam就能获取到保存在手机里面的数据</span></span><br><span class="line"><span class="comment">* @author xiaanming</span></span><br><span class="line"><span class="comment">   *</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  public <span class="keyword">class</span> SharedPreferencesUtils &#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 保存在手机里面的文件名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> static final String FILE_NAME = <span class="string">"share_date"</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">* 保存数据的方法，我们需要拿到保存数据的具体类型，然后根据类型调用不同的保存方法</span></span><br><span class="line"><span class="comment">* @param context</span></span><br><span class="line"><span class="comment">* @param key</span></span><br><span class="line"><span class="comment">* @param object </span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  public static void set<span class="constructor">Param(Context <span class="params">context</span> , String <span class="params">key</span>, Object <span class="params">object</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">  String <span class="keyword">type</span> = object.get<span class="constructor">Class()</span>.get<span class="constructor">SimpleName()</span>;</span><br><span class="line">  SharedPreferences sp = context.get<span class="constructor">SharedPreferences(FILE_NAME, Context.MODE_PRIVATE)</span>;</span><br><span class="line">  SharedPreferences.Editor editor = sp.edit<span class="literal">()</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(<span class="string">"String"</span>.equals(<span class="keyword">type</span>))&#123;</span><br><span class="line">  editor.put<span class="constructor">String(<span class="params">key</span>, (String)</span>object);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">"Integer"</span>.equals(<span class="keyword">type</span>))&#123;</span><br><span class="line">  editor.put<span class="constructor">Int(<span class="params">key</span>, (Integer)</span>object);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">"Boolean"</span>.equals(<span class="keyword">type</span>))&#123;</span><br><span class="line">  editor.put<span class="constructor">Boolean(<span class="params">key</span>, (Boolean)</span>object);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">"Float"</span>.equals(<span class="keyword">type</span>))&#123;</span><br><span class="line">  editor.put<span class="constructor">Float(<span class="params">key</span>, (Float)</span>object);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">"Long"</span>.equals(<span class="keyword">type</span>))&#123;</span><br><span class="line">  editor.put<span class="constructor">Long(<span class="params">key</span>, (Long)</span>object);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  editor.commit<span class="literal">()</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">* 得到保存数据的方法，我们根据默认值得到保存的数据的具体类型，然后调用相对于的方法获取值</span></span><br><span class="line"><span class="comment">* @param context</span></span><br><span class="line"><span class="comment">* @param key</span></span><br><span class="line"><span class="comment">* @param defaultObject</span></span><br><span class="line"><span class="comment">* @return</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  public static Object get<span class="constructor">Param(Context <span class="params">context</span> , String <span class="params">key</span>, Object <span class="params">defaultObject</span>)</span>&#123;</span><br><span class="line">  String <span class="keyword">type</span> = defaultObject.get<span class="constructor">Class()</span>.get<span class="constructor">SimpleName()</span>;</span><br><span class="line">  SharedPreferences sp = context.get<span class="constructor">SharedPreferences(FILE_NAME, Context.MODE_PRIVATE)</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(<span class="string">"String"</span>.equals(<span class="keyword">type</span>))&#123;</span><br><span class="line">  return sp.get<span class="constructor">String(<span class="params">key</span>, (String)</span>defaultObject);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">"Integer"</span>.equals(<span class="keyword">type</span>))&#123;</span><br><span class="line">  return sp.get<span class="constructor">Int(<span class="params">key</span>, (Integer)</span>defaultObject);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">"Boolean"</span>.equals(<span class="keyword">type</span>))&#123;</span><br><span class="line">  return sp.get<span class="constructor">Boolean(<span class="params">key</span>, (Boolean)</span>defaultObject);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">"Float"</span>.equals(<span class="keyword">type</span>))&#123;</span><br><span class="line">  return sp.get<span class="constructor">Float(<span class="params">key</span>, (Float)</span>defaultObject);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">"Long"</span>.equals(<span class="keyword">type</span>))&#123;</span><br><span class="line">  return sp.get<span class="constructor">Long(<span class="params">key</span>, (Long)</span>defaultObject);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return null;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*<span class="operator"> * </span>使用也很简单，保存数据</span><br><span class="line">    <span class="literal">[<span class="identifier">java</span>]</span> view plain copy 在CODE上查看代码片派生到我的代码片</span><br><span class="line">    <span class="module-access"><span class="module"><span class="identifier">SharedPreferencesUtils</span>.</span></span>set<span class="constructor">Param(<span class="params">this</span>, <span class="string">"String"</span>, <span class="string">"xiaanming"</span>)</span>;  </span><br><span class="line">    <span class="module-access"><span class="module"><span class="identifier">SharedPreferencesUtils</span>.</span></span>set<span class="constructor">Param(<span class="params">this</span>, <span class="string">"int"</span>, 10)</span>;  </span><br><span class="line">    <span class="module-access"><span class="module"><span class="identifier">SharedPreferencesUtils</span>.</span></span>set<span class="constructor">Param(<span class="params">this</span>, <span class="string">"boolean"</span>, <span class="params">true</span>)</span>;  </span><br><span class="line">    <span class="module-access"><span class="module"><span class="identifier">SharedPreferencesUtils</span>.</span></span>set<span class="constructor">Param(<span class="params">this</span>, <span class="string">"long"</span>, 100L)</span>;  </span><br><span class="line">    <span class="module-access"><span class="module"><span class="identifier">SharedPreferencesUtils</span>.</span></span>set<span class="constructor">Param(<span class="params">this</span>, <span class="string">"float"</span>, 1.1f)</span>;  </span><br><span class="line"></span><br><span class="line">获取数据</span><br><span class="line"><span class="literal">[<span class="identifier">java</span>]</span> view plain copy 在CODE上查看代码片派生到我的代码片</span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">SharedPreferencesUtils</span>.</span></span>get<span class="constructor">Param(TimerActivity.<span class="params">this</span>, <span class="string">"String"</span>, <span class="string">""</span>)</span>;                                                                                        <span class="module-access"><span class="module"><span class="identifier">SharedPreferencesUtils</span>.</span></span>get<span class="constructor">Param(TimerActivity.<span class="params">this</span>, <span class="string">"int"</span>, 0)</span>;  </span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">SharedPreferencesUtils</span>.</span></span>get<span class="constructor">Param(TimerActivity.<span class="params">this</span>, <span class="string">"boolean"</span>, <span class="params">false</span>)</span>;  </span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">SharedPreferencesUtils</span>.</span></span>get<span class="constructor">Param(TimerActivity.<span class="params">this</span>, <span class="string">"long"</span>, 0L)</span>;  </span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">SharedPreferencesUtils</span>.</span></span>get<span class="constructor">Param(TimerActivity.<span class="params">this</span>, <span class="string">"float"</span>, 0.0f)</span>;  </span><br><span class="line">~</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;1、Free-idea-mybatis&lt;/strong&gt;&lt;/p&gt;
+      
+      
+        &lt;p&gt;网上看到的一个别人写的shareperfence工具类，挺好用的。我们平常保存一些数据，都会用到SharedPreferences，他是保存在手机里面的，&lt;/p&gt;
+&lt;figure class=&quot;highlight reasonml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android alpha</title>
+    <link href="/2020/05/29/Android/alpha/"/>
+    <id>/2020/05/29/Android/alpha/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.042Z</updated>
+    
+    <content type="html"><![CDATA[<p>alpha   透明度，0为完全透明，1为完全不透明，第一个参数是初始值，第二个是结束值</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;alpha   透明度，0为完全透明，1为完全不透明，第一个参数是初始值，第二个是结束值&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>android 在一个Activity中结束另一个Activity的方法</title>
+    <link href="/2020/05/29/Android/android%20%E5%9C%A8%E4%B8%80%E4%B8%AAActivity%E4%B8%AD%E7%BB%93%E6%9D%9F%E5%8F%A6%E4%B8%80%E4%B8%AAActivity%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>/2020/05/29/Android/android 在一个Activity中结束另一个Activity的方法/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.042Z</updated>
+    
+    <content type="html"><![CDATA[<p>下面以ActivityB结束ActivityA为例</p><p>1、首先在ActivityA中定义一个静态的全局变量</p><p>static Activity ActivityA；</p><p>2、在ActivityA中的onCreate方法中给ActivityA赋值</p><p>ActivityA = this；</p><p>3、在ActivityB中，需要结束ActivityA时调用</p><p>ActivityA a = new ActivityA();a.ActivityA.finish();</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;下面以ActivityB结束ActivityA为例&lt;/p&gt;
+&lt;p&gt;1、首先在ActivityA中定义一个静态的全局变量&lt;/p&gt;
+&lt;p&gt;static Activity ActivityA；&lt;/p&gt;
+&lt;p&gt;2、在ActivityA中的onCreate方法中给ActivityA赋
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android Studio引用jar及so文件</title>
+    <link href="/2020/05/29/Android/android-Studio%E5%BC%95%E7%94%A8jar%E5%8F%8Aso%E6%96%87%E4%BB%B6/"/>
+    <id>/2020/05/29/Android/android-Studio引用jar及so文件/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.042Z</updated>
+    
+    <content type="html"><![CDATA[<p>在网上看到讲解android studio讲解jar和so文件添加的方法，觉得写的很好，所以摘抄下来目地是让自己记住这种添加方式，自己实践了也验证了正确性。<a href="http://www.cnblogs.com/xrwang/p/AndroidStudioImportJarAndSoLibrary.html" target="_blank" rel="noopener">Android Studio开发入门-引用jar及so文件</a>    </p><p><strong>一、引用jar文件</strong><br>    1.将jar文件复制、粘贴到app的libs目录中；<br>    2.右键点击jar文件，并点击弹出菜单中的“Add As Library”，将jar文件作为类库添加到项目中；<br>    3.选择指定的类库。<br>    注：如果不执行2、3步，jar文件将不起作用，并且不能使用import语句引用。    <img src="http://images.cnitblog.com/i/21602/201405/011028264559301.png" alt="img"></p><p>二、引用so文件**<br>    网上有很多引用so文件的方法，多数都很麻烦，在KYLE THIELK的博客中找到了一种简单的方法。<br>    1.在“src/main”目录中新建名为“jniLibs”的目录；<br>    2.将so文件复制、粘贴到“jniLibs”目录内。<br>    注：如果没有引用so文件，可能会在程序执行的时候加载类库失败，有类似如下的DEBUG提示：<br>    java.lang.UnsatisfiedLinkError: Couldn’t load library xxxx from loader dalvik.system.PathClassLoader    <img src="http://images.cnitblog.com/i/21602/201405/011028520642193.png" alt="img"></p><p>三、致谢及源代码下载**<br>    感谢您看完本文，希望对您有帮助。<br>    源代码是使用百度语音识别引擎的例子，<a href="http://files.cnblogs.com/xrwang/AndroidTestProject.rar" target="_blank" rel="noopener">点击这里下载</a>。<br>    注：1.本文使用的Android Studio版本为0.4.6；<br>    2.API KEY及安全KEY我随便改了个，您需要替换成自己申请的KEY才能正常运行；</p><p> Android Studio开发入门-引用jar及so文件 - Wuya - 博客园<br><a href="http://www.cnblogs.com/xrwang/p/AndroidStudioImportJarAndSoLibrary.html" target="_blank" rel="noopener">Android Studio开发入门-引用jar及so文件</a>             作者：王先荣<br>    最近初学安卓开发，因为以前从未用过JAVA，连基本的语法都要从头开始，所以不太顺利。在尝试使用百度语音识别引擎时遇到了如何引用jar及so文件的问题。在GOOGLE加多次尝试之后，找到了一个比较简单的方法，特介绍如下。</p><p>一、引用jar文件**<br>    1.将jar文件复制、粘贴到app的libs目录中；<br>    2.右键点击jar文件，并点击弹出菜单中的“Add As Library”，将jar文件作为类库添加到项目中；<br>    3.选择指定的类库。<br>    注：如果不执行2、3步，jar文件将不起作用，并且不能使用import语句引用。    <img src="http://images.cnitblog.com/i/21602/201405/011028264559301.png" alt="img"></p><p>二、引用so文件**<br>    网上有很多引用so文件的方法，多数都很麻烦，在KYLE THIELK的博客中找到了一种简单的方法。<br>    1.在“src/main”目录中新建名为“jniLibs”的目录；<br>    2.将so文件复制、粘贴到“jniLibs”目录内。<br>    注：如果没有引用so文件，可能会在程序执行的时候加载类库失败，有类似如下的DEBUG提示：<br>    java.lang.UnsatisfiedLinkError: Couldn’t load library xxxx from loader dalvik.system.PathClassLoader    <img src="http://images.cnitblog.com/i/21602/201405/011028520642193.png" alt="img"></p><p><strong>三、致谢及源代码下载</strong><br>    感谢您看完本文，希望对您有帮助。<br>    源代码是使用百度语音识别引擎的例子，<a href="http://files.cnblogs.com/xrwang/AndroidTestProject.rar" target="_blank" rel="noopener">点击这里下载</a>。<br>    注：1.本文使用的Android Studio版本为0.4.6；<br>    2.API KEY及安全KEY我随便改了个，您需要替换成自己申请的KEY才能正常运行；<br>    3.参考网址：<a href="http://www.kylethielk.com/blog/include-native-so-library-in-apk-with-android-studio/" target="_blank" rel="noopener">http://www.kylethielk.com/blog/include-native-so-library-in-apk-with-android-studio/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在网上看到讲解android studio讲解jar和so文件添加的方法，觉得写的很好，所以摘抄下来目地是让自己记住这种添加方式，自己实践了也验证了正确性。&lt;a href=&quot;http://www.cnblogs.com/xrwang/p/AndroidStudioImpor
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 开发60条技术经验总结</title>
+    <link href="/2020/05/29/Android/android-%E5%BC%80%E5%8F%9160%E6%9D%A1%E6%8A%80%E6%9C%AF%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/"/>
+    <id>/2020/05/29/Android/android-开发60条技术经验总结/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.043Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id><a href="#" class="headerlink" title></a></h2><ul><li><ol><li>全部Activity可继承自BaseActivity，便于统一风格与处理公共事件，构建对话框统一构建器的建立，万一需要整体变动，一处修改到处有效。</li></ol></li><li><ol start="2"><li>数据库表段字段常量和SQL逻辑分离，更清晰，建议使用Lite系列框架 LiteOrm 库，超级清晰且重心可以放在业务上不用关心数据库细节。</li></ol></li><li><ol start="3"><li>全局变量放全局类中，模块私有放自己的管理类中，让常量清晰且集中.</li></ol></li><li><ol start="4"><li>不要相信庞大的管理类的东西会带来什么好处，可能是一场灾难，而要时刻注意单一职责原则，一个类专心做好一件事情更为清晰。</li></ol></li><li><ol start="5"><li>如果数据没有必要加载，数据请务必延迟初始化，谨记为用户节省内存，总不会有坏处。</li></ol></li><li><ol start="6"><li>异常抛出，在合适的位置处理或者集中处理，不要搞的到处是catch，混乱且性能低，尽量不要在循环体中捕获异常，以提升性能。</li></ol></li><li><ol start="7"><li>地址引用链长时（3个以上指向）小心内存泄漏，和警惕堆栈地址指向，典型的易发事件是：数据更新了，ListView视图却没有刷新，这时Adapter很可能指向并的并不是你更新的数据容器地址（一般为List）。</li></ol></li><li>8.信息同步：不管是数据库还是网网络操作，新插入的数据注意返回ID（如果没有赋予唯一ID），否则相当于没有同步。</li><li>9.多线程操作数据库时，db关闭了会报错，也很可能出现互锁的问题，推荐使用事务，推荐使用自动化的 LiteOrm 库操作。</li><li>10.做之前先考虑那些可以公用，资源，layout，类，做一个结构、架构分析以加快开发，提升代码可复用度。</li><li><ol start="11"><li>有序队列操作add、delete操作时注意保持排序，否则你会比较难堪喔。</li></ol></li><li><ol start="12"><li>数据库删除数据时，要注意级联操作避免出现永远删不掉的脏数据喔。</li></ol></li><li><ol start="13"><li>关于形参实参：调用函数时参数为基本类型传的是值，即传值；参数为对象传递的是引用，即传址。</li></ol></li><li><ol start="14"><li>listview在数据未满一屏时，setSelection函数不起作用；ListView批量操作时各子项和视图正确对应，可见即所选。</li></ol></li><li>15 控制Activity的代码量，保持主要逻辑清晰。其他类遵守SRP（单一职能），ISP（接口隔离）原则。</li><li><ol start="16"><li>arraylist执行remove时注意移除int和Integer的区别。你懂得。</li></ol></li><li><ol start="17"><li>Log请打上Tag，调试打印一定要做标记，能定位打印位置，否则尴尬是：不知道是哪里在打印。</li></ol></li><li><ol start="18"><li>码块/常量/资源可以集中公用的一定共用，即使共用逻辑稍复杂一点也会值得，修改起来很轻松，修改一种，到处有效。</li></ol></li><li><ol start="19"><li>setSelection不起作用，尝试smoothScrollToPosition。ListView的LastVisiblePosition（最后一个可见子项）会随着getView方法执行位置不同变动而变。</li></ol></li><li>20.与Activity通讯使用Handler更方便； 如果你的框架回调链变长，考虑监听者模式简化回调。</li><li>21.监听者模式不方便使用时，推荐EventBus框架库，使用时间总线，没接触过的同学可以自行脑补一下哦。</li><li><ol start="22"><li>Handler在子线程线程使用Looper.prepare，或者new的时候给构造函数传入MainLooper来确保在主线程run。</li></ol></li><li><ol start="23"><li>timepicker 点击确定后需要clearFocus才能获取手动输入的时间。</li></ol></li><li><ol start="24"><li>构造函数里面极度不推荐启动异步线程，会埋下隐患。比如：异步线程调用了本例的示例，就会悲剧等着崩溃吧。</li></ol></li><li><ol start="25"><li>千万不要理所当然的以为一个对象不会为空，充分的做好容错处理；另外注意null也可以插入ArrayList等容器中。</li></ol></li><li><ol start="26"><li>ExpandableListView的子列表不能点击（禁用）要把Adapter的isChildSelectable方法返回true。</li></ol></li><li><ol start="27"><li>UI显示注意内容过长的情形要提前使用ScrollView否则在小手机上尴尬你懂得。</li></ol></li><li><ol start="28"><li>注意按钮的感应范围不小于9mm否则不易点击；输入框注意光标的位置更易用户输入。</li></ol></li><li><ol start="29"><li>服务器和客户端尽量统一唯一标识（有可能是ID），否则多少会有歧义和问题。</li></ol></li><li><ol start="30"><li>注释，尽量去写足够的注释，去描述一下思路，达到看了可以明白某一块代码的效果。</li></ol></li><li><ol start="31"><li>完整型数据一定要用Sqlite的Transaction，大数据一定要用。粗略测试插入100个数据有20倍的提速，插入1000个数据就有100多倍的提速。</li></ol></li><li><ol start="32"><li>避免String=”null”的情况出现String = null,=””都可以。避免出现title=”无主题”这样的数据提交到数据库浪费空间。</li></ol></li><li><ol start="33"><li>存在多个不同的dbhelper实例情况下，sqlitedatabase对象必然存在不同的实例，多线程同时写入数据，轮流写入数据时会不定时的报db is locked，引起崩溃，不管是操作同张表还是异表。读和写可以同时并发，轮流无规律的交替执行。同时写入数据时解决方案是用并发的每个线程都用事务，db则不会lock，按次整体写入。</li></ol></li><li><ol start="34"><li>建议整个应用维护一个dbhelper实例，只要db没有关闭，全局就只有一个db实例，多线程并发写入db不会lock，严格交替进行写入：123123123。。。（123代表不同线程，轮流插入一个记录），读和写均不会锁住db，读写交替并没有规律，执行次数和程度看cpu分配给哪个线程的时间片长。</li></ol></li><li><ol start="35"><li>一个任务使用事务嵌套N个事务，N个事务中有一个失败，这个任务整体失败，全部成功后，数据才写入，具有安全性，整体性。并且事务写入大批量数据的效率经实际测试成百上千倍的高于一般的单个写入。数据库大量数据、多线程操作建议使用 LiteOrm 数据库框架，更稳定简单。</li></ol></li><li><ol start="36"><li>经常需要用ListView或者其它显示大量Items的控件实时跟踪或者查看信息，并且希望最新的条目可以自动滚动到可视范围内。通过设置的控件transcriptMode属性可以将 Android 平台的控件（支持ScrollBar）自动滑动到最底部。</li></ol></li><li><ol start="37"><li>Long a; 判断a有没有赋值，if(a == 0)在a没有赋值情况下会报错。应该if(a == null)，Integer、Floag等也一样，原因你懂，只是提醒你要小心喔。</li></ol></li><li><ol start="38"><li>编码遇到读写、出入等逻辑要双向考虑，文件导入导出，字符字节相互转换都要两边转码。</li></ol></li><li><ol start="39"><li>一个 int 值与一个 Integer 对象（能包含 int 值的最小对象）的大小比率约为 1:4（32位和64位机器有不同）。额外的开销源于 JVM 用于描述 Java 对象的元数据也就是 Integer，（Long、Double等也是）。</li></ol></li><li><ol start="40"><li>对象由元数据和数据组成。元数据包括类（指向类的指针，描述了类的类型），标记（描述了对象状态，如散列码、形状等），锁（对象同步信息）。数组对象还包括大小的元数据。</li></ol></li><li><ol start="41"><li>一个在 32 位 Java 运行时中使用 1GB  Java 堆的 Java 应用程序在迁移到 64 位 Java 运行时之后，通常需要使用 1.7GB 的 Java 堆。</li></ol></li><li><ol start="42"><li>Hash 集合的访问性能比任何 List 的性能都要高，但每条目的成本也要更高。由于访问性能方面的原因，如果您正在创建大集合（例如，用于实现缓存），那么最好使用基于 Hash 的集合，而不必考虑额外的开销。</li></ol></li><li><ol start="43"><li>对于并不那么注重访问性能的较小集合而言，List 则是合理的选择。ArrayList 和 LinkedList 集合的性能大体相同，但其内存占用完全不同：ArrayList 的每条目大小要比 LinkedList 小得多，但它不是准确设置大小的。List 要使用的正确实现是 ArrayList 还是 LinkedList 取决于 List 长度的可预测性。如果长度未知，那么正确的选择可能是 LinkedList，因为集合包含的空白空间更少。如果大小已知或可预知或比较小，那么 ArrayList 的内存开销会更低一些。</li></ol></li><li><ol start="43"><li>选择正确的集合类型使你能够在集合性能与内存占用之间达到合理的平衡。除此之外，你可以通过正确调整集合大小来最大化填充率、最小化未得到利用的空间，从而最大限度地减少内存占用。</li></ol></li><li><ol start="44"><li>充分利用封装（提供接口类来控制访问数据）和委托（helper对象来实施任务）两种理念。</li></ol></li><li><ol start="45"><li>延迟分配 Hashtable：如果 Hashtable 为空是经常发生的普遍现象，那么仅在存在需要存储的数据时分配 Hashtable 应该是一种合理的做法。将 Hashtable 分配为准确的大小：虽然会有默认大小，但建议使用更为准确的初始大小。</li></ol></li><li><ol start="46"><li>EditText在setText时不要忘记是否需要setSelection。在大多数情况下是需要设置的。</li></ol></li><li><ol start="47"><li>XML两种情况要注意：1 属性名字时候有重复；2 注意文本是否包含非法字符，注意使用CDATA包裹。</li></ol></li><li><ol start="48"><li>当逻辑没有明显问题时考虑对象属性、函数参数、网络传输参数是否全部了解，是否设置正确。</li></ol></li><li><ol start="49"><li>当出现编译或者运行时错误，别人那没问题时，考虑你的编译环境和环境版本是否有问题。</li></ol></li><li><ol start="50"><li>由于String类的immutable性质，当String变量需要经常变换其值时，应该考虑使用StringBuilder提升性能，多线程使用StringBuffer操作string提高程序效率。</li></ol></li><li><ol start="51"><li>java 栈的优势是比堆速度快，可共享，主要存放临时变量、参数等，堆的优势是可动态分配内存大小。</li></ol></li><li><ol start="52"><li>只要是用new()来新建对象的，都会在堆中创建，而且其数据是单独存值的，即使与栈中的数据（值）相同，也不会与栈中的数据共享。</li></ol></li><li><ol start="53"><li>基本数据类型定义的变量称自动变量，存的是‘字面值’，存在于栈中，可共享（存在即不新建）。</li></ol></li><li><ol start="54"><li>多个RandomAccessFile对象指向同一个文件，可使用多个线程一起写入无需再自己加锁，经试验结论：三个线程分别写入100万次数据，使用锁约12秒，不使用约8.5秒。100个线程分别写入1万次数据使用锁耗时约4.2秒，不使用锁耗时约3秒。</li></ol></li><li><ol start="55"><li>XmlPullParser解析慎用nextText()方法，xml比较复杂，含有空标签、重复名字标签时容易出现异常问题；TEXT中使用getText()方法代替START_TAG中使用nextText()方法；START_TAG，TEXT，END_TAG三个事件配合使用。注意每个xml节点之间（不管是开始节点还是结束节点）都会出现TEXT事件。</li></ol></li><li><ol start="56"><li>改变逻辑的时候考虑全部用到这项功能的地方，分散的地方多了，容易大意。</li></ol></li><li><ol start="57"><li>当系统原生组件出现问题时，查看错误栈信息，自己写一个该组件的子类，并在合适的地方将出错方法复写一下，加上try catch保证不崩溃掉。不要扰乱了该系统控件的正常逻辑。</li></ol></li><li><ol start="58"><li>输入控件注意对空格、换行等符号的控制；输入框里内容注意和左右控件的空间，防止误点击。</li></ol></li><li><ol start="59"><li>注意函数参数里的++或者–操作。是++c 还是 c++，区别很大。</li></ol></li><li><ol start="60"><li>各种地方、永远的不要小看null指针问题，甚至有些场合宁可错杀（try catch），不可放过。</li></ol></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;ol&gt;
+&lt;li&gt;全部Activity可继承自BaseActivity，便于统一风格与处理公共事件，构建对话框统一构建器的建立，万一需要整体变动，一处修改到
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 5x</title>
+    <link href="/2020/05/29/Android/android5x/"/>
+    <id>/2020/05/29/Android/android5x/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.043Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="Toast-中使用Contrext-是使用Application的Context好-还是Activity的Context好"><a href="#Toast-中使用Contrext-是使用Application的Context好-还是Activity的Context好" class="headerlink" title="Toast 中使用Contrext 是使用Application的Context好 还是Activity的Context好"></a>Toast 中使用Contrext 是使用Application的Context好 还是Activity的Context好</h6><hr><h6 id="多个请求的时候-进度条怎么显示-是一个一个显示还是只显示第一个"><a href="#多个请求的时候-进度条怎么显示-是一个一个显示还是只显示第一个" class="headerlink" title="多个请求的时候 进度条怎么显示 是一个一个显示还是只显示第一个"></a>多个请求的时候 进度条怎么显示 是一个一个显示还是只显示第一个</h6><hr><h6 id="AlarmManager-是什么东西"><a href="#AlarmManager-是什么东西" class="headerlink" title="AlarmManager 是什么东西"></a>AlarmManager 是什么东西</h6><hr><h6 id="IntentService-和Service有什么不同"><a href="#IntentService-和Service有什么不同" class="headerlink" title="IntentService 和Service有什么不同"></a>IntentService 和Service有什么不同</h6><hr><h6 id="Java静态代码块static执行顺序"><a href="#Java静态代码块static执行顺序" class="headerlink" title="Java静态代码块static执行顺序"></a>Java静态代码块static执行顺序</h6><hr><h6 id="android自定义view"><a href="#android自定义view" class="headerlink" title="android自定义view"></a>android自定义view</h6><hr><h6 id="File-文件流"><a href="#File-文件流" class="headerlink" title="File 文件流"></a>File 文件流</h6><hr><h6 id="view-getViewTreeObserver-addOnGlobalLayoutListener"><a href="#view-getViewTreeObserver-addOnGlobalLayoutListener" class="headerlink" title="view.getViewTreeObserver().addOnGlobalLayoutListener"></a>view.getViewTreeObserver().addOnGlobalLayoutListener</h6><hr><h6 id="图片的信息exif-信息"><a href="#图片的信息exif-信息" class="headerlink" title="图片的信息exif 信息"></a>图片的信息exif 信息</h6><hr><h6 id="MarkDown-语法"><a href="#MarkDown-语法" class="headerlink" title="MarkDown 语法"></a>MarkDown 语法</h6><hr><h6 id="、IOException"><a href="#、IOException" class="headerlink" title="、IOException"></a>、IOException</h6><hr><h6 id="android-drawableLeft-”-drawable-icon-about”"><a href="#android-drawableLeft-”-drawable-icon-about”" class="headerlink" title="android:drawableLeft=”@drawable/icon_about”"></a>android:drawableLeft=”@drawable/icon_about”</h6><hr><h6 id="如何把从服务器获取的名字匹配drawable里的图片？如：（网络获取的名字“展示”，从drawable里获取相应的图片（zhanshi-png））-反射去获取"><a href="#如何把从服务器获取的名字匹配drawable里的图片？如：（网络获取的名字“展示”，从drawable里获取相应的图片（zhanshi-png））-反射去获取" class="headerlink" title="如何把从服务器获取的名字匹配drawable里的图片？如：（网络获取的名字“展示”，从drawable里获取相应的图片（zhanshi.png））  反射去获取"></a>如何把从服务器获取的名字匹配drawable里的图片？如：（网络获取的名字“展示”，从drawable里获取相应的图片（zhanshi.png））  反射去获取</h6><p>这个方法就是通过反射获取指定图片名字的资源Id的方法</p><p>public static int getDrawableResourceId(String name){</p><p> try(){</p><p>Field field=R.drawable.class.getField(name);</p><p>return  field.getInt（null);</p><p>}catch(NoSuchFieldException e)</p><p>e.printStackTrace();  </p><p>}catch(IllegalAccessException e)</p><p>e.printStackTrace();  </p><p>}catch(IllegalAragumentException e)</p><p>e.printStackTrace();  </p><p>}</p><p>return -1;</p><hr><h6 id="MeasureSpec-UNSPECIFIED-和almost、extra区别"><a href="#MeasureSpec-UNSPECIFIED-和almost、extra区别" class="headerlink" title="MeasureSpec.UNSPECIFIED 和almost、extra区别"></a>MeasureSpec.UNSPECIFIED 和almost、extra区别</h6><hr><h6 id="Android-5-x-Material-Design设计风格"><a href="#Android-5-x-Material-Design设计风格" class="headerlink" title="Android  5.x Material Design设计风格"></a>Android  5.x Material Design设计风格</h6><p>1.Android5.x新特性之 RecyclerView/CardView/Palette/FloatButton</p><pre><code>dependencies {    compile fileTree(include: [&apos;*.jar&apos;], dir: &apos;libs&apos;)    compile &apos;com.android.support:recyclerview-v7:21.0.3&apos;    compile &apos;com.android.support:cardview-v7:21.0.3&apos;    compile &apos;com.android.support:palette-v7:22.2.0&apos;}</code></pre><ol><li>Android5.x新特性之 Toolbar和Theme的使用</li></ol><p>3.谷歌推出了Android Design Support Library 库，全面支持MD设计风格的UI效果。Design Support Library库吸收了8 个新的 material design 组件！最低支持 Android2.1，其实很多组件都是Github上比较火的，只是谷歌把它官方化了，便于开发者使用。今天我们来学习<br>FloatingActionButton，TextInputLayout，Snackbar，TabLayout 四种控件。</p><p> 这篇博客我们继续学习Design库中的其他四个组件，分别是AppBarLayout，NavigationView，CoordinatorLayout，CollapsingToolbarLayout。同样，你需要在你的工程中引入<br>compile ‘com.android.support:design:22.2.0’</p><p>Drawerlayout和NavigationView实现优雅的Google范儿侧边栏</p><p>总的来说：AppBarLayout、CollapsingToolbarLayout、CoordinatorLayout、FloatingActionButton、NavigationView、Snackbar、TabLayout、TextInputLayout、</p><h6 id="listview"><a href="#listview" class="headerlink" title="listview"></a>listview</h6><p>  &lt;com.welearn.banzhuren.view.XListView<br>        android:id=”@+id/answer_list”<br>        android:layout_width=”match_parent”<br>        android:layout_height=”wrap_content”<br>        android:cacheColorHint=”@android:color/transparent”<br>        android:divider=”@color/answer_list_diver”<br>        android:fadingEdge=”none”<br>        android:fastScrollEnabled=”false”<br>        android:footerDividersEnabled=”false”<br>        android:headerDividersEnabled=”false”<br>        android:listSelector=”@android:color/transparent”<br>        android:scrollbars=”none” /&gt;</p><hr><h6 id="notification和notification-Builder"><a href="#notification和notification-Builder" class="headerlink" title="notification和notification.Builder()"></a>notification和notification.Builder()</h6><hr><p>######自定义属性的使用<br>做Android布局是件很享受的事，这得益于他良好的xml方式。使用xml可以快速有效的为软件定义界面。可是有时候我们总感觉官方定义的一些基本组件不够用，自定义组件就不可避免了。那么如何才能做到像官方提供的那些组件一样用xml来定义他的属性呢？现在我们就来讨论一下他的用法。</p><p>一、在res/values文件下定义一个attrs.xml文件，代码如下：</p><?xml version="1.0" encoding="utf-8"?><p><br><resources><br>    <declare-styleable name="ToolBar"><br>        <attr name="buttonNum" format="integer"><br>        <attr name="itemBackground" format="reference|color"><br>    </attr></attr></declare-styleable><br></resources></p><p>二、在布局xml中如下使用该属性:</p><?xml version="1.0" encoding="utf-8"?><p><br><relativelayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:toolbar="http://schemas.android.com/apk/res/cn.zzm.toolbar" androidrientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"><br>    &lt;cn.zzm.toolbar.ToolBar android:id=”@+id/gridview_toolbar”<br>        android:layout_width=”fill_parent”<br>        android:layout_height=”wrap_content”<br>        android:layout_alignParentBottom=”true”<br>        android:background=”@drawable/control_bar”<br>        android:gravity=”center”<br>        toolbar:buttonNum=”5”<br>        toolbar:itemBackground=”@drawable/control_bar_item_bg”/&gt;<br></relativelayout></p><p>三、在自定义组件中，可以如下获得xml中定义的值：</p><p>TypedArray a = context.obtainStyledAttributes(attrs,R.styleable.ToolBar);<br>buttonNum = a.getInt(R.styleable.ToolBar_buttonNum, 5);<br>itemBg = a.getResourceId(R.styleable.ToolBar_itemBackground, -1);</p><p>a.recycle();</p><p>就这么简单的三步，即可完成对自定义属性的使用。</p><hr><p>好了，基本用法已经讲完了，现在来看看一些注意点和知识点吧。</p><p>首先来看看attrs.xml文件。</p><p>该文件是定义属性名和格式的地方，需要用<declare-styleable name="ToolBar"></declare-styleable>包围所有属性。其中name为该属性集的名字，主要用途是标识该属性集。那在什么地方会用到呢？主要是在第三步。看到没？在获取某属性标识时，用到”R.styleable.ToolBar_buttonNum”，很显然，他在每个属性前面都加了”ToolBar_”。</p><p>在来看看各种属性都有些什么类型吧：string , integer , dimension , reference , color , enum.</p><p>前面几种的声明方式都是一致的，例如：<attr name="buttonNum" format="integer">。<br>只有enum是不同的，用法举例：</attr></p><attr name="testEnum">     <enum name="fill_parent" value="-1">     <enum name="wrap_content" value="-2"> </enum></enum></attr><p>如果该属性可同时传两种不同的属性，则可以用“|”分割开即可。</p><p>让我们再来看看布局xml中需要注意的事项。</p><p>首先得声明一下：xmlns:toolbar=<a href="http://schemas.android.com/apk/res/cn.zzm.toolbar" target="_blank" rel="noopener">http://schemas.android.com/apk/res/cn.zzm.toolbar</a><br>注意，“toolbar”可以换成其他的任何名字，后面的url地址必须最后一部分必须用上自定义组件的包名。自定义属性了，在属性名前加上“toolbar”即可。</p><p>最后来看看java代码中的注意事项。</p><p>在自定义组件的构造函数中，用</p><p>TypedArray a = context.obtainStyledAttributes(attrs,R.styleable.ToolBar);</p><p>来获得对属性集的引用，然后就可以用“a”的各种方法来获取相应的属性值了。这里需要注意的是，如果使用的方法和获取值的类型不对的话，则会返回默认值。因此，如果一个属性是带两个及以上不用类型的属性，需要做多次判断，知道读取完毕后才能判断应该赋予何值。当然，在取完值的时候别忘了回收资源哦！</p><hr><h6 id="自定义控件的一些api"><a href="#自定义控件的一些api" class="headerlink" title="自定义控件的一些api"></a>自定义控件的一些api</h6><p>Paint:<br>canvas:<br>rect:<br>onMeasure()–&gt;widthMeasureSpec<br>onDraw()–&gt;heightMeasureSpec<br>getMeasuredWidth(), getMeasuredHeight()</p><h6 id="单例类传入context，context有回调的时候内存泄露问题"><a href="#单例类传入context，context有回调的时候内存泄露问题" class="headerlink" title="单例类传入context，context有回调的时候内存泄露问题"></a>单例类传入context，context有回调的时候内存泄露问题</h6><h6 id="uri和url的区别"><a href="#uri和url的区别" class="headerlink" title="uri和url的区别"></a>uri和url的区别</h6><p>​    </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h6 id=&quot;Toast-中使用Contrext-是使用Application的Context好-还是Activity的Context好&quot;&gt;&lt;a href=&quot;#Toast-中使用Contrext-是使用Application的Context好-还是Activity的Contex
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/2020/05/29/Android/android%E4%B8%AD%E5%BC%95%E7%94%A8%E8%B5%84%E6%BA%90%E8%A7%A3%E9%87%8A/"/>
+    <id>/2020/05/29/Android/android中引用资源解释/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.043Z</updated>
+    
+    <content type="html"><![CDATA[<p>一.@代表引用资源</p><p>1.引用自定义资源。格式：@[package:]type/name</p><p>android：text=”@string/hello”</p><p>2.引用系统资源。格式：@android:type/name</p><pre><code>android:textColor=&quot;@android:color/opaque_red&quot;</code></pre><p>  注意：其实@android:type/name是@[package:]type/name 的一个子类</p><p>二.@<em>代表引用系统的非public资源。格式：@</em>android:type/name</p><p>  系统资源定义分public和非public。public的声明在：</p><p>  <sdk_path>\platforms\android-8\data\res\values\public.xml</sdk_path></p><p>  @*android:type/name：可以调用系统定义的所有资源</p><p>  @android:type/name：只能够调用publi属性的资源。</p><p>  注意：没在public.xml中声明的资源是google不推荐使用的。</p><p>三.？代表引用主题属性</p><p>  另外一种资源值允许你引用当前主题中的属性的值。这个属性值只能在style资源和XML属性中使用；它允许你通过将它们改变为当前主题提供的标准变化来改变UI元素的外观，而不是提供具体的值。例如：</p><p>  android:textColor=”?android:textDisabledColor” </p><p>   注意，这和资源引用非常类似，除了我们使用一个”?”前缀代替了”@”。当你使用这个标记时，你就提供了属性资源的名称，它将会在主题中被查找，所以你不需要显示声明这个类型(如果声明，其形式就是?android:attr/android:textDisabledColor)。除了使用这个资源的标识符来查询主题中的值代替原始的资源，其命名语法和”@”形式一致：?[namespace:]type/name，这里类型可选。</p><p> 四.@+代表在创建或引用资源 。格式：@+type/name</p><pre><code>含义：”+”表示在R.java中名为type的内部类中添加一条记录。如&quot;@+id/button&quot;的含义是在R.java 文件中的id 这个静态内部类添加一条常量名为button。该常量就是该资源的标识符。如果标示符（包括系统资源）已经存在则表示引用该标示符。最常用的就是在定义资源ID中，例如：</code></pre><p> @+id/资源ID名         新建一个资源ID</p><p> @id/资源ID名          应用现有已定义的资源ID，包括系统ID</p><p> @android:id/资源ID名   引用系统ID，其等效于@id/资源ID名 </p><p> android:id=”@+id/selectdlg”</p><p> android:id=”@android:id/text1”</p><p> android:id=”@id/button3”  </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;一.@代表引用资源&lt;/p&gt;
+&lt;p&gt;1.引用自定义资源。格式：@[package:]type/name&lt;/p&gt;
+&lt;p&gt;android：text=”@string/hello”&lt;/p&gt;
+&lt;p&gt;2.引用系统资源。格式：@android:type/name&lt;/p&gt;
+&lt;pre&gt;&lt;co
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 获取系统颜色</title>
+    <link href="/2020/05/29/Android/android%E5%8F%96%E7%B3%BB%E7%BB%9F%E9%A2%9C%E8%89%B2%E5%80%BC/"/>
+    <id>/2020/05/29/Android/android取系统颜色值/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.044Z</updated>
+    
+    <content type="html"><![CDATA[<p>在android中?android与@android有什么区别，可能很少人去纠结这个问题，只是大家在使用上更多的去使用@android:color,  比如给TextView设置颜色</p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">android:</span>textColor=<span class="string">"?android:color/black"</span></span><br><span class="line"><span class="symbol">android:</span>textColor=<span class="string">"@android:color/black"</span></span><br></pre></td></tr></table></figure><p> 事实上这两种都是对的，百度上有个回答了这个问题</p><p> ?android与@android的区别是什么？</p><p> android:textAppearance=”?android:textAppearanceMedium”<br>        android:textAppearance=”@android:style/TextAppearance.Medium”<br>不一样吗？？？</p><p>不一样，但效果可能一样。 android开发者中有相关说明(Referencing style attributes). @android引用系统资源， ?android 引用本应用theme内的资源。在自定义theme时， 一些未自定义的缺省的属性则相当于引用系统资源</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在android中?android与@android有什么区别，可能很少人去纠结这个问题，只是大家在使用上更多的去使用@android:color,  比如给TextView设置颜色&lt;/p&gt;
+&lt;figure class=&quot;highlight avrasm&quot;&gt;&lt;table&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 获取view在屏幕中的位置</title>
+    <link href="/2020/05/29/Android/android%E8%8E%B7%E5%8F%96view%E5%9C%A8%E5%B1%8F%E5%B9%95%E4%B8%AD%E7%9A%84%E4%BD%8D%E7%BD%AE/"/>
+    <id>/2020/05/29/Android/android获取view在屏幕中的位置/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.044Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>getLocalVisibleRect</strong> ， 返回一个填充的Rect对象， 感觉是这个View的Rect大小，left，top取到的都是0</p><p><strong>getLocalVisibleRect</strong> ， 返回一个填充的Rect对象， 感觉是这个View的Rect大小，left，top取到的都是0<br><strong>getGlobalVisibleRect</strong> ， 获取全局坐标系的一个视图区域， 返回一个填充的Rect对象；该Rect是基于总整个屏幕的</p><p><strong>getLocalVisibleRect</strong> ， 返回一个填充的Rect对象， 感觉是这个View的Rect大小，left，top取到的都是0<br><strong>getGlobalVisibleRect</strong> ， 获取全局坐标系的一个视图区域， 返回一个填充的Rect对象；该Rect是基于总整个屏幕的<br><strong>getLocationOnScreen</strong> ，计算该视图在全局坐标系中的x，y值，（注意这个值是要从屏幕顶端算起，也就是索包括了通知栏的高度）//获取在当前屏幕内的绝对坐标 </p><p><strong>getLocalVisibleRect</strong> ， 返回一个填充的Rect对象， 感觉是这个View的Rect大小，left，top取到的都是0<br><strong>getGlobalVisibleRect</strong> ， 获取全局坐标系的一个视图区域， 返回一个填充的Rect对象；该Rect是基于总整个屏幕的<br><strong>getLocationOnScreen</strong> ，计算该视图在全局坐标系中的x，y值，（注意这个值是要从屏幕顶端算起，也就是索包括了通知栏的高度）//获取在当前屏幕内的绝对坐标<br><strong>getLocationInWindow</strong> ，计算该视图在它所在的widnow的坐标x，y值，//获取在整个窗口内的绝对坐标 (不是很理解= =、)</p><p><strong>getLocalVisibleRect</strong> ， 返回一个填充的Rect对象， 感觉是这个View的Rect大小，left，top取到的都是0<br><strong>getGlobalVisibleRect</strong> ， 获取全局坐标系的一个视图区域， 返回一个填充的Rect对象；该Rect是基于总整个屏幕的<br><strong>getLocationOnScreen</strong> ，计算该视图在全局坐标系中的x，y值，（注意这个值是要从屏幕顶端算起，也就是索包括了通知栏的高度）//获取在当前屏幕内的绝对坐标<br><strong>getLocationInWindow</strong> ，计算该视图在它所在的widnow的坐标x，y值，//获取在整个窗口内的绝对坐标 (不是很理解= =、)<br><strong>getLeft</strong> , <strong>getTop</strong>, <strong>getBottom</strong>, <strong>getRight</strong>,  这一组是获取相对在它父亲里的坐标</p><p><strong>getLocalVisibleRect</strong> ， 返回一个填充的Rect对象， 感觉是这个View的Rect大小，left，top取到的都是0<br><strong>getGlobalVisibleRect</strong> ， 获取全局坐标系的一个视图区域， 返回一个填充的Rect对象；该Rect是基于总整个屏幕的<br><strong>getLocationOnScreen</strong> ，计算该视图在全局坐标系中的x，y值，（注意这个值是要从屏幕顶端算起，也就是索包括了通知栏的高度）//获取在当前屏幕内的绝对坐标<br><strong>getLocationInWindow</strong> ，计算该视图在它所在的widnow的坐标x，y值，//获取在整个窗口内的绝对坐标 (不是很理解= =、)<br><strong>getLeft</strong> , <strong>getTop</strong>, <strong>getBottom</strong>, <strong>getRight</strong>,  这一组是获取相对在它父亲里的坐标<br><strong>注</strong>：如果在Activity的OnCreate()事件输出那些参数，是全为0，要等UI控件都加载完了才能获取到这些</p><p><strong>getLocalVisibleRect</strong> ， 返回一个填充的Rect对象， 感觉是这个View的Rect大小，left，top取到的都是0<br><strong>getGlobalVisibleRect</strong> ， 获取全局坐标系的一个视图区域， 返回一个填充的Rect对象；该Rect是基于总整个屏幕的<br><strong>getLocationOnScreen</strong> ，计算该视图在全局坐标系中的x，y值，（注意这个值是要从屏幕顶端算起，也就是索包括了通知栏的高度）//获取在当前屏幕内的绝对坐标<br><strong>getLocationInWindow</strong> ，计算该视图在它所在的widnow的坐标x，y值，//获取在整个窗口内的绝对坐标 (不是很理解= =、)<br><strong>getLeft</strong> , <strong>getTop</strong>, <strong>getBottom</strong>, <strong>getRight</strong>,  这一组是获取相对在它父亲里的坐标<br><strong>注</strong>：如果在Activity的OnCreate()事件输出那些参数，是全为0，要等UI控件都加载完了才能获取到这些<br><strong>example:</strong></p><p> int[] location = new int[2];    v.getLocationOnScreen(location); </p><p> int x = location[0]; </p><p> int y = location[1];</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;getLocalVisibleRect&lt;/strong&gt; ， 返回一个填充的Rect对象， 感觉是这个View的Rect大小，left，top取到的都是0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;getLocalVisibleRect&lt;/strong&gt; ， 返回一个填
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java中的TODO</title>
+    <link href="/2020/05/29/Java/Java%E4%B8%AD%E7%9A%84TODO/"/>
+    <id>/2020/05/29/Java/Java中的TODO/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.044Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Java中的TODO"><a href="#Java中的TODO" class="headerlink" title="Java中的TODO"></a>Java中的TODO</h3><h6 id="代码中特殊的注释技术——TODO、FIXME和XXX的用处"><a href="#代码中特殊的注释技术——TODO、FIXME和XXX的用处" class="headerlink" title="[代码中特殊的注释技术——TODO、FIXME和XXX的用处]"></a>[代码中特殊的注释技术——TODO、FIXME和XXX的用处]</h6><p>前言：<br>今天在阅读Qt  Creator的源代码时，发现一些注释中有FIXME英文单词，用英文词典居然查不到其意义！<br>实际上，在阅读一些开源代码时，我们常会碰到诸如：TODO、FIXME和XXX的单词，它们是有其特殊含义的。、</p><p><strong>TODO: + 说明</strong>：<br>如果代码中有该标识，说明在标识处有功能代码待编写，待实现的功能在说明中会简略说明。</p><p><strong>FIXME: + 说明</strong>：<br>如果代码中有该标识，说明标识处代码需要修正，甚至代码是错误的，不能工作，需要修复，如何修正会在说明中简略说明。</p><p>XXX: + 说明<strong>：<br>如果代码中有该标识，说明标识处代码虽然实现了功能，但是实现的方法有待商榷，希望将来能改进，要改进的地方会在说明中简略说明。<br>**eclipse中特殊的注释：</strong><br>在eclipse中，TODO、FIXME和XXX都会被eclipse的task视图所收集。在项目发布前，检查一下task视图是一个很好的习惯。此外，在eclipse中，我们可自定义自己的特殊注释标签。如在C/C++中，进入window—&gt;preferences—&gt;C/C++—&gt;Task Tags窗口即可添加特殊标签，默认只有TODO、FIXME和XXX。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Java中的TODO&quot;&gt;&lt;a href=&quot;#Java中的TODO&quot; class=&quot;headerlink&quot; title=&quot;Java中的TODO&quot;&gt;&lt;/a&gt;Java中的TODO&lt;/h3&gt;&lt;h6 id=&quot;代码中特殊的注释技术——TODO、FIXME和XXX的用处&quot;&gt;&lt;a
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>创建Hexo 博客</title>
+    <link href="/2020/05/29/hexo/hello-world/"/>
+    <id>/2020/05/29/hexo/hello-world/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.045Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="创建Hexo-博客"><a href="#创建Hexo-博客" class="headerlink" title="创建Hexo 博客"></a>创建Hexo 博客</h3><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;创建Hexo-博客&quot;&gt;&lt;a href=&quot;#创建Hexo-博客&quot; class=&quot;headerlink&quot; title=&quot;创建Hexo 博客&quot;&gt;&lt;/a&gt;创建Hexo 博客&lt;/h3&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; targ
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hugo和hexo搭建博客</title>
+    <link href="/2020/05/29/hexo/hugo%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>/2020/05/29/hexo/hugo和hexo搭建博客/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.047Z</updated>
+    
+    <content type="html"><![CDATA[<p>关于Hugo和hexo搭建github博客，看到网上各种文章介绍hugo和hexo搭建github博客，自己也来试了一下。首先说下我的感受:1.hugo搭建博客有点问题，本地调试可以看到效果但是当我编译成静态网页上传到github上去的时候，很多效果出不来，我不知道别人能不能出来。后台换了hexo。2.hexo搭建的时候过程其实不是很复杂，只不过要下载并且安装nodejs,其实不用太懂nodejs，因为现成的命令都在，可以变敲边看网上的命令。有些命令直接是缩写，你只要懂缩写的意思其实挺容易的。3.最后上传到github上去的时候，有个同事跟我说不用每次编译静态的网页上传到github，有个自动部署的可以配置,在主配置文件里面，哈哈哈，以后只要在source/post里面写上自己的md文档就ok了</p><p>关于配置hexo主题，其实挺简单的，网上大把的博客介绍怎么配置，我们只要看官方的那个文档，按照自己需要的功能配置就可以了，什么打赏这些功能用不上就不用配置了，反正看了一下有些复杂.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;关于Hugo和hexo搭建github博客，看到网上各种文章介绍hugo和hexo搭建github博客，自己也来试了一下。首先说下我的感受:1.hugo搭建博客有点问题，本地调试可以看到效果但是当我编译成静态网页上传到github上去的时候，很多效果出不来，我不知道别人能不
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用快捷键-Sublime</title>
+    <link href="/2020/05/29/%E5%B7%A5%E5%85%B7/Sublime%20text3%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>/2020/05/29/工具/Sublime text3快捷键/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.048Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Sublime-快捷键"><a href="#Sublime-快捷键" class="headerlink" title="Sublime 快捷键"></a>Sublime 快捷键</h3><ol><li><p>设置<br> •Ctrl + `： 打开Sublime Text控制台<br> •Ctrl + K, Ctrl + B： 组合键，显示或隐藏侧栏<br> •F11： 切换普通全屏<br> •Shift + F11： 切换无干扰全屏</p></li><li><p>编辑<br> •Ctrl + Enter： 在当前行下面新增一行然后跳至该行<br> •Ctrl + Shift + Enter： 在当前行上面增加一行并跳至该行<br> •Ctrl + ←/→： 进行逐词移动，<br> •Ctrl + Shift + ←/→： 进行逐词选择<br> •Ctrl + ↑/↓: 移动当前显示区域（只是显示窗口的变化，文件不会被修改）<br> •Ctrl + Shift + ↑/↓： 移动当前行（文件会被修改）</p></li><li><p>选择<br> •Ctrl + D： 选择当前光标所在的词并高亮该词所有出现的位置，再次Ctrl + D，会选择该词出现的下一个位置<br> •Ctrl + K： 在多重选词的过程中，会将当前选中的词进行跳过<br> •Ctrl + U： 在多重选词的过程中，进行回退，<br> •Esc： 退出多重编辑<br> •Ctrl + Shift + L： 将当前选中区域打散，然后进行同时编辑<br> •Ctrl + J： 把当前选中区域合并为一行</p></li><li><p>查找<br> •对使用Shift + ←/→或Ctrl + D或鼠标选中的关键字进行搜索： •F3： 跳到关键字下一个出现位置<br> •Shift + F3： 跳到关键字上一个出现位置<br> •Alt + F3： 选中关键字出现的所有位置（之后可以进行快速替换）</p></li></ol><p>•Ctrl + F： 调出搜索框 •Enter： 跳至关键字下一个位置<br>•Shift + Enter： 跳至关键字上一个位置<br>•Alt + Enter： 选中关键字出现的所有位置（同样的，接下来可以进行快速替换）</p><p>•Ctrl + H： 调出替换框进行替换 •Ctrl + Shift + H： 输入替换内容后，替换当前关键字<br>•Ctrl + Alt + Enter： 输入替换内容后，替换所有匹配关键字。(NOTE: 注意此时如果鼠标焦点在编辑窗口中，则替换失败，将鼠标焦点调到替换框中，Ctrl + Alt + Enter才会起作用)</p><p>•Ctrl + Shift + F： 开启多文件搜索&amp;替换<br>•Alt + C： 切换大小写敏感（Case-sensitive）模式<br>•Alt + W： 切换整字匹配（Whole matching）模式<br>•Alt + R： 切换正则匹配模式的开启/关闭</p><ol start="5"><li>跳转<br>•Ctrl + P： •列出当前打开的文件（或者是当前文件夹的文件），输入文件名然后 Enter 跳转至该文件<br>•组合跳转（“Go To Anything”）：Ctrl + P匹配到文件后，我们可以进行后续输入以跳转到更精确的位置 •@ 符号跳转：输入@symbol跳转到symbol符号所在的位置<br>•# 关键字跳转：输入#keyword跳转到keyword所在的位置<br>•: 行号跳转：输入:12跳转到文件的第12行</li></ol><p>•Ctrl + R：  •列出当前文件中的符号（例如类名和函数名，但无法深入到变量名），输入符号名称 Enter 即可以跳转到该处。<br>•会列出Markdown文件的大纲</p><p>•F12： 快速跳转到当前光标所在符号的定义处（Jump to Definition）。比如当前光标所在为一个函数调用，F12会跳转至该函数的定义处。<br>•Ctrl + G： 输入行号以跳转到指定行</p><ol start="6"><li><p>窗口和Tab页<br>•Ctrl + N： 在当前窗口创建一个新标签<br>•Ctrl + Shift + N： 创建一个新窗口（该快捷键 和搜狗输入法快捷键冲突）<br>•Ctrl + W： 关闭标签页，如果没有标签页了，则关闭该窗口<br>•Ctrl + Shift + T： 恢复刚刚关闭的标签。</p></li><li><p>分屏<br>•Alt + Shift + 2： 进行左右分屏<br>•Alt + Shift + 8进行上下分屏<br>•Alt + Shift + 5进行上下左右分屏（即分为四屏）<br>•Ctrl + 数字键： 跳转到指定屏<br>•Ctrl + Shift + 数字键： 将当前屏移动到指定屏</p></li><li><p>格式化<br>•Ctrl + [： 向左缩进<br>•Ctrl + ]： 向右缩进<br>•Ctrl + Shift + V： 可以以当前缩进粘贴代码<br>•Tab： 自动补全关键字</p></li><li><p>括号<br>•Ctrl + M： 可以快速的在起始括号和结尾括号间切换<br>•Ctrl + Shift + M：可以快速选择括号间的内容<br>•Ctrl + Shift + J: 对于缩进型语言（例如Python）可以快速选择相同缩进语句块的内容</p></li></ol><p>NOTE：</p><ol><li><p>Ctrl + Shift + F： 开启多文件搜索&amp;替换，此快捷键和搜狗输入法的简繁切换快捷键有冲突，所以当你调不出搜索框时，注意一下当前是否切换到了搜狗输入法，如果是的话，切换到英文输入法，然后再Ctrl + Shift + F调出。</p></li><li><p>Ctrl + Shift + F： 开启多文件搜索&amp;替换, 默认在当前打开的文件和文件夹进行搜索/替换，</p></li></ol><p>我们可以指定在当前打开的文件进行搜索/替换</p><p>2.4 设置</p><p>2.4.1 单用户设置</p><ol><li><p>sublime Text 3的默认设置文件无法修改 （Preferences/Settings - Default）</p></li><li><p>如果你想修改配置（比如字体等），需要修改User下的配置文件（Preferences/Settings - User），将如下代码copy进去【2】【3】</p></li></ol><p>复制代码<br>{<br>    “color_scheme”: “Packages/Color Scheme - Default/Monokai.tmTheme”,<br>    // 设置Courier New等宽字体，以便阅读<br>    “font_face”: “Courier New”,<br>    “font_size”: 12.0,<br>    // 使光标闪动更加柔和<br>    “caret_style”: “phase”,<br>    // 高亮当前行<br>    “highlight_line”: true,<br>    // 高亮有修改的标签<br>    “highlight_modified_tabs”: true,</p><pre><code>&quot;ignored_packages&quot;:[    &quot;Vintage&quot;]</code></pre><p>}</p><p>复制代码</p><p>NOTE： 所添加的设置要放在下面这段代码前面，否则会报错；如果将其放在该段代码段后面的话，要给中括号后面添加一个逗号。</p><pre><code>&quot;ignored_packages&quot;:[    &quot;Vintage&quot;],</code></pre><ol start="3"><li>如果想设置Tab键等代码规范，可以如下设置【2】</li></ol><p>复制代码<br>    // 设置tab的大小为4<br>    “tab_size”: 4,<br>    // 使用空格代替tab<br>    “translate_tabs_to_spaces”: true,<br>    // 添加行宽标尺<br>    “rulers”: [80, 100],<br>    // 显示空白字符<br>    “draw_white_space”: “all”,<br>    // 保存时自动去除行末空白<br>    “trim_trailing_white_space_on_save”: true,<br>    // 保存时自动增加文件末尾换行<br>    “ensure_newline_at_eof_on_save”: true, </p><p>复制代码</p><p>2.4.2 修改sublime Text 的默认配置文件位置</p><ol><li><p>安装完sublime text，在第一次运行的时候，sublime text 会在%appdata%目录下生成一个Sublime Text 3的文件夹，用于存放配置文件，以及后面安装的各种插件。</p></li><li><p>可以把这个文件移动到sublime text 3安装目录下，便于设置完后打包。以便同时在公司机器、家里机器上保障2者配置能同步。具体设置可参考【4】</p></li></ol><p>2.4.3 主题与配色</p><ol><li>How to install a Sublime Text theme？</li></ol><p>有2种方法：</p><p>（1）可以使用Colorsublime plugin 来安装新的theme（the easy way）。</p><p>在Package Control搜索’Colorsublime’，然后install the plugin。安装步骤，参考【6】</p><p>安装步骤：</p><p>（2）手动安装（the hard way）。</p><p>参考【5】</p><ol start="2"><li>安装Colorsublime plugin</li></ol><p>有2种办法：</p><p>（1）使用Package Control (recommended)</p><p>按下Ctrl+Shift+P调出命令面板，输入install 调出 Install Package 选项并回车，在列表中输入插件名Colorsublime，选择插件安装。</p><p>（2）手动安装</p><p>参考【6】</p><ol start="3"><li>Colorsublime plugin用法</li></ol><p>（1）Press ctl+shift+p to open up Sublime Text’s command menu</p><p>（2）Select Colorsublime: Install Theme</p><p>（3）Use the arrow keys to run through the themes and see your current tab change in realtime!</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Sublime-快捷键&quot;&gt;&lt;a href=&quot;#Sublime-快捷键&quot; class=&quot;headerlink&quot; title=&quot;Sublime 快捷键&quot;&gt;&lt;/a&gt;Sublime 快捷键&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;设置&lt;br&gt; •Ctrl + `： 打开Subli
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>插件-VSCode</title>
+    <link href="/2020/05/29/%E5%B7%A5%E5%85%B7/%E6%8F%92%E4%BB%B6-VSCode/"/>
+    <id>/2020/05/29/工具/插件-VSCode/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.049Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h3><p><strong>1.Path Intellisense</strong><br>     自动补全代码中的路径和文件名，帮你记住文件路径 省去找到正确文件路径的时间</p><p><strong>2. GitLens</strong><br>​     很好用的git插件</p><p><strong>3.Prettier</strong><br>​      你绝对不能少了这个插件，你需要它来一键美化你的JavaScript/TypeScript/CSS代码。</p><p><strong>4.EsLint</strong><br>​      静态代码分析工具，用来识别js代码中出现的有问题的模式<br>​      ESLint中的规则是可以配置的，用户可以定义和加载自己的规则，它还涵盖了代码质量和编码风格的问题</p><p><strong>5.Settings Sync</strong><br>    编辑器设置同步，包括插件，配置等。</p><p><strong>6.Bracket Pair Colorizer</strong><br>    为代码中的括号们上色，区分 这个扩展允许用颜色来标识匹配的括号。用户可以定义要匹配的字符和要是用的颜色，</p><p><strong>7.Auto Close Tag</strong><br>    自动闭合标签</p><p><strong>8.Auto Rename Tag</strong><br>​    自动重命名配对的HTML / XML标签</p><p><strong>9. JavaScript (ES6) code snippets JS</strong><br>​    ES6代码自动填充</p><p><strong>10.Color-Highlight</strong><br>    在编辑器中高亮显示颜色。</p><p><strong>11.TODO Highlight</strong><br>    高亮显示代码中的TODO、FIXME及其他注解</p><p><strong>12.Color Picker</strong><br>    代码的颜色选择器。</p><p><strong>13.Visual Studio Intellicode</strong><br>​    这个插件能帮助开发者生成智能代码补全提示，并且内置支持很多编程语言</p><h3 id="主题插件"><a href="#主题插件" class="headerlink" title="主题插件"></a>主题插件</h3><h4 id="Material-theme；"><a href="#Material-theme；" class="headerlink" title="　　Material-theme；"></a>　　Material-theme；</h4><h4 id="monokai-light"><a href="#monokai-light" class="headerlink" title="　　monokai-light;"></a>　　monokai-light;</h4><h4 id="Monokai"><a href="#Monokai" class="headerlink" title="　　Monokai++;"></a>　　Monokai++;</h4><h4 id="One-Dark-Theme"><a href="#One-Dark-Theme" class="headerlink" title="　　One Dark Theme;"></a>　　One Dark Theme;</h4><h3 id="图标主题"><a href="#图标主题" class="headerlink" title="图标主题"></a>图标主题</h3><p>vscode-icons</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;常用插件&quot;&gt;&lt;a href=&quot;#常用插件&quot; class=&quot;headerlink&quot; title=&quot;常用插件&quot;&gt;&lt;/a&gt;常用插件&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1.Path Intellisense&lt;/strong&gt;&lt;br&gt;     自动补全代码中的路径和文件名，帮你
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件的版本区别</title>
+    <link href="/2020/05/29/%E5%B7%A5%E5%85%B7/%E8%BD%AF%E4%BB%B6%E7%9A%84%E7%89%88%E6%9C%AC%E5%8C%BA%E5%88%AB/"/>
+    <id>/2020/05/29/工具/软件的版本区别/</id>
+    <published>2020-05-29T14:12:34.000Z</published>
+    <updated>2020-06-25T05:24:49.049Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id><a href="#" class="headerlink" title></a></h3><p>Alpha、Beta、RC、GA版本的区别</p><p>Alpha：是内部测试版,一般不向外部发布,会有很多Bug.一般只有测试人员使用。</p><p>Beta：也是测试版，这个阶段的版本会一直加入新的功能。在Alpha版之后推出。</p><p>RC：(Release　Candidate) 顾名思义么 ! 用在软件上就是候选版本。系统平台上就是发行候选版本。RC版不会再加入新的功能了，主要着重于除错。</p><p>GA:General Availability,正式发布的版本，在国外都是用GA来说明release版本的。</p><p>RTM：(Release to Manufacture)是给工厂大量压片的版本，内容跟正式版是一样的，不过RTM版也有出限制、评估版的。但是和正式版本的主要程序代码都是一样的。</p><p>OEM：是给计算机厂商随着计算机贩卖的，也就是随机版。只能随机器出货，不能零售。只能全新安装，不能从旧有操作系统升级。包装不像零售版精美，通常只有一面CD和说明书(授权书)。</p><p>RVL：号称是正式版，其实RVL根本不是版本的名称。它是中文版/英文版文档破解出来的。</p><p>EVAL：而流通在网络上的EVAL版，与“评估版”类似，功能上和零售版没有区别。</p><p>RTL：Retail(零售版)是真正的正式版，正式上架零售版。在安装盘的i386文件夹里有一个eula.txt，最后有一行EULAID，就是你的版本。比如简体中文正式版是EULAID:WX.4PRO_RTL_CN，繁体中文正式版是WX.4PRO_RTL_TW。其中：如果是WX.开头是正式版，WB.开头是测试版。PRE，代表家庭版；PRO，代表专业版。</p><p>α、β、λ常用来表示软件测试过程中的三个阶段，α是第一阶段，一般只供内部测试使用；β是第二个阶段，已经消除了软件中大部分的不完善之处，但仍有可能还存在缺陷和漏洞，一般只提供给特定的用户群来测试使用；λ是第三个阶段，此时产品已经相当成熟，只需在个别地方再做进一步的优化处理即可上市发行。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Alpha、Beta、RC、GA版本的区别&lt;/p&gt;
+&lt;p&gt;Alpha：是内部测试版,一般不向外部发布,会有很多Bug.一般只有测试人员使用。&lt;/p&gt;
+&lt;p&gt;Beta：也
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>插件-Intelij idea</title>
+    <link href="/2020/05/29/%E5%B7%A5%E5%85%B7/%E6%8F%92%E4%BB%B6-Intelij%20idea%20/"/>
+    <id>/2020/05/29/工具/插件-Intelij idea /</id>
+    <published>2020-05-29T14:08:01.000Z</published>
+    <updated>2020-06-25T05:24:49.049Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Idea-扩展"><a href="#Idea-扩展" class="headerlink" title="Idea 扩展"></a>Idea 扩展</h3><p><strong>1、Free-idea-mybatis</strong>   </p><p>mybatis xml和对应的mapper之间来回切换的时候，有时候不同人开发，放置的位置又不同，使用此插件后，来回切换的时候异常方便，和所放置的位置无关~</p><p> <strong>Mybatis 工具：Free Mybatis plugin</strong></p><p><strong>2.翻译插件Translation</strong></p><p>开发的时候经常会遇到看不懂的英语单词，再去百度多麻烦，这里推荐这款翻译插件，插件名称叫做，安装后选中单词按下快捷键ALT+1即可。</p><a id="more"></a><p><strong>3.Maven Helper</strong></p><p>主要功能如下：查找和排除冲突依赖项的简便方法，为包含当前文件或根模块的模块运行/调试maven目标的操作，运行/调试当前测试文件的操作</p><p><strong>4、Lombok</strong></p><p>Lombok能以简单的注解形式来简化java代码，提高开发人员的开发效率。例如开发中经常需要写的javabean，都需要花时间去添加相应的getter/setter，也许还要去写构造器、equals等方法，而且需要维护，当属性多时会出现大量的getter/setter方法，这些显得很冗长也没有太多技术含量，一旦修改属性，就容易出现忘记修改对应方法的失误。Lombok能通过注解的方式，在编译时自动为属性生成构造器、getter/setter、equals、hashcode、toString方法。</p><p>出现的神奇就是在源码中没有getter和setter方法，</p><p><strong>5、IdeaJad</strong></p><p>以前查看class文件形式的时候或者jar，都会使用一个外部反编译工具，这样操作明显不方便，使用此插件可以一直在idea中查看文件~  ps：其实Inteli Idea这个编译器已经自带了反编译功能，老夫<del>~</del></p><p>选择class文件，右键 Decompile,完成反编译</p><p><strong>6、GrepConsole</strong></p><p>Idea console输出日志一大推，想要快速找到自己想要的类型日志，使用此插件可以快速定位到自己关注的类型日志，比如error，warn，自己也可以配置自己喜欢的颜色~</p><p>从settings进入，点击 other settings，可以配置自己喜欢的颜色提示，比如我只选择了默认~</p><p><strong>7、GsonFormat</strong></p><p>在与组外或者不同部门对接接口时候发现，有时候对方返回的是JSON对象，自己想要用一个对象去接受，以便于处理后续，此时，需要自己一个个手动去输入属性么，肯定很抓狂，不过咱们可以使用这个插件来解决这个尴尬问题，当然也可以使用外部网址解决，比如bejson这个网站~  </p><p><strong>8、Mybatis-log-plugin</strong></p><p>开发的项目一般都少不了日志系统，而我们在书写mysql语句的时候，参数的对应，往往有时候会忽略，mybatis自己控制的参数编译对应，个人感觉有点反人类，我们可以使用这个插件变成自己比较直观的对应~</p><p>选中需要转换的mybatis log日志，然后点击右键，选择Restore sql from slection</p><p><strong>9、Alibaba Java Coding Guidelines</strong></p><p>一款阿里巴巴公司试行的开发设计规范~ </p><ol start="10"><li><strong>彩虹颜色括号</strong>：Rainbow Brackets</li></ol><p><strong>11、阿里 p3c</strong></p><p><a href="https://github.com/alibaba/p3c/blob/master/idea-plugin/README_cn.md" target="_blank" rel="noopener">https://github.com/alibaba/p3c/blob/master/idea-plugin/README_cn.md</a></p><p>另外还有一些其他的插件：<br>阿里代码规约检测：Alibaba Java Coding Guidelines<br>自动生成序列图插件：SequenceDiagram<br>快捷键提示工具：Key promoter X<br>代码注解插件： Lombok<br>代码生成工具：CodeMaker<br>代码质量检查工具：SonarLint<br>单元测试测试生成工具：JUnitGenerator<br>JSON转领域对象工具：GsonFormat<br>字符串工具：String Manipulation<br>Redis可视化：Iedis<br>K8s工具：Kubernetes</p><h3 id="Idea-主题"><a href="#Idea-主题" class="headerlink" title="Idea 主题"></a>Idea 主题</h3><ul><li><p>IDEA Theme官网: <a href="https://plugins.jetbrains.com/search?headline=164-theme&amp;isPaid=false&amp;tags=Theme" target="_blank" rel="noopener">https://plugins.jetbrains.com/search?headline=164-theme&amp;isPaid=false&amp;tags=Theme</a></p></li><li><p>riaway官网: <a href="https://www.riaway.com/" target="_blank" rel="noopener">https://www.riaway.com/</a></p></li><li><p>easycolor官网: <a href="http://www.soft-hub.cn/index.php" target="_blank" rel="noopener">http://www.soft-hub.cn/index.php</a></p></li><li><p>Color Themes官网: <a href="http://color-themes.com/?view=index" target="_blank" rel="noopener">http://color-themes.com/?view=index</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Idea-扩展&quot;&gt;&lt;a href=&quot;#Idea-扩展&quot; class=&quot;headerlink&quot; title=&quot;Idea 扩展&quot;&gt;&lt;/a&gt;Idea 扩展&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1、Free-idea-mybatis&lt;/strong&gt;   &lt;/p&gt;
 &lt;p&gt;mybatis xml和对应的mapper之间来回切换的时候，有时候不同人开发，放置的位置又不同，使用此插件后，来回切换的时候异常方便，和所放置的位置无关~&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;Mybatis 工具：Free Mybatis plugin&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2.翻译插件Translation&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;开发的时候经常会遇到看不懂的英语单词，再去百度多麻烦，这里推荐这款翻译插件，插件名称叫做，安装后选中单词按下快捷键ALT+1即可。&lt;/p&gt;
     
